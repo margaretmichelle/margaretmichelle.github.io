@@ -92,3 +92,41 @@ header {
     color: #4a5568;
     line-height: 1.5;
 }
+
+/* Project Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Make sure the sections are spaced properly */
+section {
+    padding-top: 60px; /* To account for the fixed navbar */
+}
