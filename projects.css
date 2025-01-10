@@ -1,0 +1,60 @@
+/* Project pages */
+.navbar {
+    position: relative;
+  }
+
+.header {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+    .header h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+/* Image Container */
+.p-image-container {
+    background-color: #111;
+    padding: 60px;
+    border-radius: 10px;
+    width: 700px;
+    max-width: 100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .portfolio-image {
+    width: 200px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .image-container h2 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  /* Overview Section */
+.project {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height:1.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .project h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project p {
+    font-size: 1rem;
+  }

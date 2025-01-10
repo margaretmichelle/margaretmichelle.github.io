@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Margaret Lee | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
+    <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">Margaret Lee</a>
+          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="resume.html" class="nav-item">Resume</a></li>
+          </ul>
+        </div>
+    </nav>
 
     <!-- Home Section -->
-    <section class="home">
+    <section id="home" class="full-page">
         <div class="text">
             <h1>Hi, my name is </h1>
             <p>lorem ipsum</p>
@@ -29,64 +39,76 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="experience">
-        <h2>Work Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-item">
-                <img src="optimus-logo.png" alt="Optimus AI Lab">
-                <h3>Optimus AI Lab</h3>
-                <span>Mid-level Frontend Engineer</span>
-                <span>Nov 25, 2024 - Present</span>
-                <p>A.</p>
-            </div>
-            <div class="experience-item">
-                <img src="paydestal-logo.png" alt="Paydestal">
-                <h3>Paydestal</h3>
-                <span>Frontend Developer</span>
-                <span>Sep 11, 2024 - Present</span>
-                <p>A.</p>
-            </div>
-            <div class="experience-item">
-                <img src="educative-logo.png" alt="Educative">
-                <h3>Educative</h3>
-                <span>Project Author</span>
-                <span>Dec 5, 2023 - Sep 16, 2024</span>
-                <p>T.</p>
-            </div>
-            <div class="experience-item">
-                <img src="freecodecamp-logo.png" alt="FreeCodeCamp">
-                <h3>FreeCodeCamp</h3>
-                <span>Technical Writer</span>
-                <span>Aug 25, 2022 - Dec 6, 2023</span>
-                <p>V.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section id="projects" class="full-page">
         <div class="content">
             <h2>Projects</h2>
+            <div class="filter">
+                <!-- Filter Buttons -->
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
             <div class="cards">
-                <div class="card">
+                <a href="project1.html" class="card" data-tags="web, design">
                     <h3>Project 1</h3>
                     <p>Short description of project 1.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="card">
+                    <div class="tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Design</span>
+                    </div>
+                </a>
+                <a href="#home" class="card" data-tags="web">
                     <h3>Project 2</h3>
                     <p>Short description of project 2.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="card">
+                    <div class="tags">
+                        <span class="tag">Web</span>
+                    </div>
+                </a>
+                <a href="#home" class="card" data-tags="web">
                     <h3>Project 3</h3>
                     <p>Short description of project 3.</p>
-                    <a href="#">View Project</a>
-                </div>
+                    <div class="tags">
+                        <span class="tag">Web</span>
+                    </div>
+                </a>
+                <a href="#home" class="card" data-tags="design">
+                    <h3>Project 4</h3>
+                    <p>Short description of project 4.</p>
+                    <div class="tags">
+                        <span class="tag">Design</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
-    
+
+    <script>
+        // JavaScript for filtering projects
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.card');
+
+                // Show all cards if 'all' filter is selected
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-tags').includes(filter)) {
+                        card.style.display = 'block'; // Show the card
+                    } else {
+                        card.style.display = 'none'; // Hide the card
+                    }
+                });
+            });
+        });
+
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+      
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      </script>
+      
+
 </body>
 </html>

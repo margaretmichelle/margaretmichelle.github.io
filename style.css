@@ -1,17 +1,141 @@
-body {
+/* Reset some default styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Body and Font Styles */
+body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #2f2f5f;
-    padding: 1rem;
+.navbar {
+    background-color: #1a237e;
     color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px; /* Add space between text and underline */
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: #1a237e;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  
+
+/* Full Page Sections */
+.full-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-.home {
+/* Content Inside Sections */
+.content h1, .content h2 {
+    margin-bottom: 20px;
+}
+
+.content img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Home Section */
+.full-page#home {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,93 +144,71 @@ header {
     color: #2d3748;
 }
 
-.home .text {
+.full-page#home .text {
     max-width: 600px;
 }
 
-.home h1 {
+.full-page#home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #2b6cb0;
 }
 
-.home p {
+.full-page#home p {
     font-size: 1.25rem;
     line-height: 1.6;
 }
 
-.home img {
+.full-page#home img {
     max-width: 300px;
     height: auto;
 }
 
-.experience {
-    background-color: #ffffff;
-    padding: 3rem 2rem;
+/* About Section */
+.full-page#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background: linear-gradient(135deg, #f0e2e6, #edf2f7);
+    padding: 5rem 2rem;
+    color: #2d3748; */
 }
 
-.experience h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+/* Project Section */
+.full-page#projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #f0e2e6, #edf2f7);
+    padding: 5rem 2rem;
     color: #2d3748;
 }
 
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.experience-item {
-    background: #f7fafc;
-    border: 1px solid #e2e8f0;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.experience-item img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
-.experience-item h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    color: #2b6cb0;
-}
-
-.experience-item span {
-    font-size: 0.875rem;
-    color: #4a5568;
-}
-
-.experience-item p {
-    font-size: 1rem;
-    color: #4a5568;
-    line-height: 1.5;
-}
-
-/* Project Cards */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .card {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: 350px;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Inherit text color */
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card h3 {
@@ -117,16 +219,65 @@ header {
     margin-bottom: 10px;
 }
 
-.card a {
-    text-decoration: none;
-    color: #007BFF;
+.card::after {
+    content: '\2192'; /* Right arrow */
+    font-size: 24px;
+    color: #000000;
+    position: absolute;
+    bottom: 5px; /* Position the arrow near the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.2s ease;
 }
 
-.card a:hover {
-    text-decoration: underline;
+.card:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* Tags Styling */
+.card .tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card .tag {
+    background-color: #2d3748;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.card .tag:hover {
+    background-color: #4a5568;
+}
+
+/* Filter Button Styling */
+.filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background-color: #4a5568;
 }
 
 /* Make sure the sections are spaced properly */
 section {
     padding-top: 60px; /* To account for the fixed navbar */
 }
+
