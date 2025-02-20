@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaret Lee | ML Driving</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-item">Home</a></li>
+            <li><a href="../index.html#about" class="nav-item">About</a></li>
+            <li><a href="../index.html#projects" class="nav-item">Projects</a></li>
+            <li><a href="resume.html" class="nav-item">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/lee-margaret/" class=""nav-item>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                class="linkedin-svg"
+                d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"/>
+              </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- <div id="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#manu">Manufacturing</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </div> -->
+
+    <main>
+        <div class="header">
+            <h1>Machine Learning Driving Competition</h1>
+        </div>
+        <section class="project">
+            <p>| ENPH 353 | 2022 |</p>
+        </section>
+        <div id="tools-overview">
+            <div class="container">
+                <!-- Left Column: Tools -->
+                <div class="left-column">
+                    <h2>Tools</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>OpenCV</li>
+                        <li>TensorFlow</li>
+                        <li>ROS</li>
+                        <li>Gazebo Simulator</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Overview -->
+                <div class="right-column">
+                    <h2>Overview</h2>
+                    <p>For ENPH 353, I developed an self-driving car in a simulated environment with 
+                        a classmate. The car can drive on the road, using computer vision to distinguish pavement from grass and other 
+                        terrain, identify crosswalks and stop for pedestrians, and detect and catalogue licence plates with trained 
+                        convolutional neural networks achieving over 90% prediction accuracy. I practiced PID and Q-learning control 
+                        algorithms, data processing and classification, and robotics simulations.
+                        </p>
+                </div>
+            </div>
+        </div>
+        <br>
+      <div class="p-image-container">
+        <figure>
+            <img src="../images/mldrv1.png" alt="Simulated world in Gazebo" class="portfolio-image">
+            <figcaption>Simulated world in Gazebo</figcaption>
+        </figure>
+      </div>
+  
+      <section class="project">
+        <h2 id="background">Background</h2>
+        <p>
+            The ENPH 353 competition that takes place in a simulated world, running in Gazebo, where participating teams 
+            are tasked with the development of an autonomous robot capable of navigating roads and reading licence plates within the 
+            simulation. The simulated world is made up of an inner and outer ring of road with six “parked cars”. Each car has a licence 
+            plate as well as a parking ID posted on its front face. Points are awarded for completing a lap around the outer loop as 
+            well as for correctly reporting a licence plate and its corresponding parking ID back to the score tracker. However, points 
+            can also be deducted for violating traffic rules such as not driving within the white lines and colliding with pedestrians. 
+            This simulation was run completely on Linux in Gazebo Simulator. We took advantage of the modularization available through 
+            ROS nodes and topics with each task encapsulated within its own node script and only critical information being published 
+            to topics.
+        </p>
+        <br>
+        <h2>Driving</h2>
+        <h3>Image Processing</h3>
+        <p>
+            Using a camera feed from the car read from a ROS topic, we had real-time images to feed our driving algorithm. There were two 
+            types of terrain to drive on: a paved road with grass lining the sides, and a grassy hill with only white lines indicating 
+            the boundaries of the road. As such, we needed a robust processing technique to ensure our car always knew where the road was. 
+            This process to extract the blocks of white involved HSV filtering with a bitwise mask, a binary filter, a median blur, and 
+            finally we used OpenCV's contours and moments function to determine the center of mass.
+        </p>
+        <br>
+        <div class="p-image-container">
+            <figure>
+                <img src="../images/mldrv2.png" alt="Image processing example" class="portfolio-image">
+                <figcaption>Original camera image (left) and masked image after HSV filtering (right)</figcaption>
+            </figure>
+        </div>
+        <h3>Driving Algorithm</h3>
+        <p>
+            Three methods were considered for the control of our car: PID, Q-learning, and imitation learning. After playing around and 
+            completing sets of training, we moved forward with PD control as it was significantly outperforming the other options with 
+            much less time invested. Our primary output was the angular speed of the car, with linear speed being a dependent variable. 
+            The center of mass of the white road lines in both x and y (with the origin at the top left of the image) was taken into 
+            consideration in the formula below:
+            $$ \omega = P_x \frac{x_d-x}{x_d} - P_y \frac{y_d-y}{y_d} $$
+            Where \(x_d\) and \(y_d\) are the desired coordinates, \(x\) and \(y\) are the actual coordinates, and \(P_x\) and \(P_y\)
+            are the proportional gains. The differences are divided by the desired coordinates for normalization purposes and are multiplied 
+            by their respective proportional gain. 
+            $$ v=P_s(1- \frac{|\omega|}{P_x + P_y}) $$
+            The formula for the linear speed includes a new variable Ps which is the linear proportional gain. We made the simplifying 
+            assumption that the second term never or rarely exceeds one so the robot’s speed is limited from 0 to Ps. Derivative control 
+            was added to counteract some small oscillations when the proportional control was correcting the trajectory. Overall, this PD control 
+            was highly successful, easy to tune, and shockily quite robust over different real-time factors dictated by the processing speed 
+            of the computer running the simulation. It was also excellent at correcting itself; we would drop the robot into various sections 
+            of the environment and it was able to straighten out quickly with few oscillations.
+        </p>
+        <br>
+        
+        <h3>Crosswalk and Pedestrian Detection</h3>
+        <p>
+          We used the red lines at the crosswalk to recognize crosswalks. A filter similar to the driving image processing described above 
+          was applied, but this time isolating red pixels in the camera image. Pedestrians were detected using the frame subtraction method. 
+          We performed many tests until we were confident we would never hit a pedestrian.
+        </p>
+        <br>
+        <div class="p-image-container">
+            <figure>
+                <img src="../images/mldrv3.png" alt="Frame subtraction" class="portfolio-image">
+                <img src="../images/mldrv4.png" alt="Frame subtraction" class="portfolio-image">
+                <figcaption>Frame subtraction for pedestrian motion detection</figcaption>
+            </figure>
+        </div>
+        <h2>Licence Plate Recognition</h2>
+        <div class="p-image-container">
+            <figure>
+                <img src="../images/mldrv5.png" alt="Parked car example" class="portfolio-image">
+                <figcaption>Example of a "parked car" with stall id number and licence plate</figcaption>
+            </figure>
+        </div>
+        <p>
+            We had to identify parked cars and correctly read the stall id number and licence plate number. Similar to previous image processing, 
+            we utilized a bitwise mask to locate and format parked cars for further processing. We performed a perspeective transform 
+            on the licence plate to obtain a clear and consistent format for parsing licence plates. Each character of the licence plate were 
+            sliced into individual images by dilating the image and thresholding for the characters to find four bounding rectangles made 
+            from the contours of the characters. These sliced images were then sent though our convolutional neural network (CNN). We trained our 
+            CNN on custom datasets consisting of a mix of ideal and real (from simulation) licence plate in Google Colab.
+        </p>
+        <br>
+        <div class="p-image-container">
+            <figure>
+                <img src="../images/mldrv6.png" alt="Licence plate contour finding and perspective transform" class="portfolio-image">
+                <figcaption>Stall number contour identified by the green outline (left) and the same contour after doing a perspective transform (right)</figcaption>
+            </figure>
+        </div>
+      </section>
+
+    </main>
+
+    <a href="robotsummer.html" class="next-project-btn">
+        Go to Next Project &rarr;
+    </a>
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>Made by Margaret 2025</p>
+        </div>
+      </footer>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+  </body>
+  </html>

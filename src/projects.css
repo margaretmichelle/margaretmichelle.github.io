@@ -1,0 +1,186 @@
+/* Table of Contents Sidebar */
+/* #toc {
+    position: fixed;
+    top: 15%;
+    left: 20px;
+    width: 200px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#toc h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#toc ul li {
+    margin: 10px 0;
+}
+
+#toc ul li a {
+    text-decoration: none;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#toc ul li a:hover {
+    color: #3182ce;
+} */
+
+html {
+    background: linear-gradient(#ffffff80, rgba(255, 255, 255, 0.5)), url('../images/noise.png');
+    background-blend-mode: screen;
+    background-size: 200px 200px;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+  }
+
+.header {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+    .header h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+.project {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height:1.6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    
+    .project p {
+    font-size: 1rem;
+    }
+
+/* Container for the two columns */
+#tools-overview .container {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto; /* Center the container */
+    align-items: flex-start;
+}
+
+/* Left Column: Tools */
+.left-column {
+    width: 30%; /* Width for the left column */
+    /* padding: 20px; */
+}
+
+.left-column h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-column ul {
+    list-style-type: disc;
+    padding-left: 10px;
+}
+
+.left-column ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Right Column: Overview */
+.right-column {
+    width: 65%; /* Width for the right column */
+    /* padding: 20px; */
+}
+
+.right-column h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.right-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Image Container */
+.p-image-container {
+    max-width: 100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .portfolio-image {
+    /* width: 400px; */
+    max-width: 700px;
+    max-height: 60vh;
+    /* height: auto; */
+    border-radius: 2px;
+  }
+
+  .portfolio-video {
+    border-radius: 2px;
+  }
+  
+  figcaption {
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  ul li {
+    list-style-position: inside;
+  }
+
+  .image-container h2 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  /* Next Project Button Styling */
+.next-project-btn {
+    position: fixed; /* Fix the button to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #3182ce; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.next-project-btn:hover {
+    background-color: #225e9e; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
