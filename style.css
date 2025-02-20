@@ -5,9 +5,34 @@
     box-sizing: border-box;
 }
 
+
+.kumbh-sans {
+  font-family: "Kumbh Sans", serif, Verdana, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "YOPQ" 300;
+}
+
+.kumbh-sans-header {
+  font-family: "Kumbh Sans", serif, Verdana, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "YOPQ" 300;
+}
+
+.alice {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Basic Body and Font Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
     line-height: 1.6;
 }
 
@@ -17,9 +42,9 @@ html {
 
 .navbar {
     /* background-color: #567c55; */
-    background-color: #e1eef1;
+    background-color: #fdf9ff;
     background-image: url('images/noise.png');
-    background-size: 100px 100px;
+    background-size: 200px 200px;
     /* background: linear-gradient(180deg, #e1eef1, #ffffff), url('images/noise.png');
     background-blend-mode: saturation;
     background-size: cover, 200px;
@@ -56,17 +81,21 @@ html {
   }
 
   .nav-links a {
-    text-decoration: none;
-    color: rgb(33, 31, 31);
-    font-size: 1rem;
     transition: color 0.3s ease;
   }
 
   .nav-item {
     text-decoration: none;
-    font-size: 18px;
+    color: #3f3f46;
+    font-size: 1.05rem;
     position: relative;
     padding-bottom: 8px;
+    font-family: "Kumbh Sans", serif, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "YOPQ" 300;
   }
 
   .nav-item::after {
@@ -76,7 +105,7 @@ html {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: white;
+    background-color: #3f3f46;
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
@@ -86,7 +115,7 @@ html {
   }
 
   .linkedin-svg {
-    fill: white; 
+    fill: #3f3f46; 
   }
 
   /* Responsive Design for Mobile */
@@ -124,44 +153,41 @@ html {
 
 /* Home Section */
 .full-page#home {
-    color: #2d3748;
+    /* color: #2d3748; */
     /* padding-top: 50px; */
     position: relative;
     padding: 2px;
-    min-height: 93vh;
-    background: linear-gradient(20deg, #e3f4f8, #ffffff), url('images/noise.png');
+    min-height: 94vh;
+    background: linear-gradient(30deg, #edd5dc, #e7f1ff, #dbedff), url('images/noise.png');
     background-blend-mode: saturation;
-    /* background-image: url('images/noise.png'); */
-    /* filter: invert(100%); */
-    /* background-size: 200px 200px; */
     background-size: cover, 200px;
     background-position: center, center;
 }
 
 .full-page#home .text {
     position: absolute;
-    max-width: 600px;
+    max-width: 700px;
     padding-top: 30px;
     padding-left: 50px;
-    top: 20%;
+    top: 15%;
     left: 10%;
     z-index: 2;
+    text-align: center;
 }
 
 .full-page#home h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 1000;
-    font-size: 4.5rem;
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
     margin-top: 0;
-    color: rgb(0, 0, 0);
+    color: #25284b;
 }
 
 .full-page#home p {
-    font-family: "Alumni Sans Pinstripe", serif;
-    font-weight: 1000;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     line-height: 1.6;
+    margin-bottom: 0;
+    color: #3f3f46;
 }
 
 .svg-container {
@@ -183,7 +209,7 @@ html {
 .path1, .path3 {
     stroke: #ffffff;
     fill: transparent;
-    stroke-width: 0.2;
+    stroke-width: 0.1;
     transform-box: fill-box;
     stroke-linecap: round;
     transform-origin: 50% 50%;
@@ -198,7 +224,7 @@ html {
 .path2 {
     stroke: #fffdfd;
     fill: transparent;
-    stroke-width: 0.2;
+    stroke-width: 0.1;
     transform-box: fill-box;
     stroke-linecap: round;
     transform-origin: 50% 50%;
@@ -215,7 +241,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f0e2e6, #f7f3ed), url('images/noise.png');
+    background: linear-gradient(110deg, #edd5dc, #f3eade), url('images/noise.png');
     background-blend-mode: saturation;
     background-size: cover, 200px;
     background-position: center, center;
@@ -234,7 +260,7 @@ html {
 }
 
 .about-me {
-    max-width: 40%;
+    max-width: 50%;
     padding-right: 10%;
     z-index: 2;
   }
@@ -242,11 +268,15 @@ html {
 h2 {
     font-size: 2rem; /* Adjust header size */
     margin-bottom: 10px; /* Space below the header */
+    letter-spacing: 2px;
+    text-align: center;
+    color: #3f3f46;
 }
 
 .about-me p {
-    font-size: 1rem;
-    line-height: 1.6; /* Improves readability */
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #3f3f46;
 }
 
 /* Project Section */
@@ -256,12 +286,12 @@ h2 {
   /* align-items: center; */
   text-align: center;
   justify-content: space-around;
-  background: linear-gradient(135deg, #efe2f0, #eaf0ff), url('images/noise.png');
+  background: linear-gradient(50deg, #efe2f0, #efe2f0, #f3eade), url('images/noise.png');
   background-blend-mode: saturation;
   background-size: cover, 200px;
   background-position: center, center;
   padding: 3rem 2rem;
-  color: #2d3748;
+  color: #3f3f46;
   min-height: 95vh;
 }
 
@@ -285,7 +315,7 @@ h2 {
   transition: transform 0.2s ease;
   position: relative;
   text-decoration: none;
-  color: inherit; /* Inherit text color */
+  color: #3f3f46;
   display: block;
 }
 
@@ -299,6 +329,12 @@ h2 {
 
 .card h3 {
   margin-bottom: 10px;
+  font-family: "Kumbh Sans", serif, Verdana, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "YOPQ" 300;
 }
 
 .card p {
@@ -308,7 +344,7 @@ h2 {
 .card::after {
   content: '\2192'; /* Right arrow */
   font-size: 24px;
-  color: #000000;
+  color: #3f3f46;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -343,15 +379,14 @@ h2 {
 }
 
 .card .tag {
-  background-color: #2d3748;
+  background-color: #7e7e87;
   color: white;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 7px;
+  font-size: 11px;
   text-transform: uppercase;
 }
 
-/* Filter Button Styling */
 .filter {
   display: flex;
   justify-content: center;
@@ -366,8 +401,9 @@ h2 {
   border-radius: 5px;
   background: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
   text-transform: uppercase;
+  color: #3f3f46;
 }
 
 .filter-btn:hover {
@@ -376,13 +412,12 @@ h2 {
 
 /* Footer Styling */
 #footer {
-  /* background-image: url('images/noise.png');
-  background-size: 200px 200px; */
+  background-image: url('images/noise.png');
+  background-size: 200px 200px;
   background-color: white;
-  border: #000000;
-  border-width: 1px;
-  color: white; /* Text color */
-  padding: 15px;
+  /* border-top: 2px solid #3f3f46; */
+  color: #3f3f46;
+  padding: 10px;
   text-align: center;
   position: relative;
   bottom: 0;
@@ -390,11 +425,5 @@ h2 {
 }
 
 .footer-content p {
-  font-size: 15px;
-}
-
-.footer-content p.a {
   font-size: 12px;
-  margin-bottom: 2px;
-  font-style: italic;
 }

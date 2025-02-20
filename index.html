@@ -6,10 +6,10 @@
     <title>Margaret Lee | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Dancing+Script&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Quicksand:wght@400;700&family=Josefin+Sans:wght@400;700&family=Raleway:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
@@ -18,7 +18,7 @@
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#about" class="nav-item">About</a></li>
         <li><a href="#projects" class="nav-item">Projects</a></li>
-        <li><a href="resume.html" class="nav-item">Resume</a></li>
+        <li><a href="src/Resume_MargaretLee.pdf" class="nav-item">Resume</a></li>
         <li><a href="https://www.linkedin.com/in/lee-margaret/" class=""nav-item>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -52,26 +52,27 @@
       </div>
       <div class="text">
           <p>Hey there! I'm</p>
-          <h1>Margaret Lee</h1>
+          <h1 class="alice">Margaret Lee</h1>
+          <p>Engineering Physics Student at UBC</p>
       </div>
   </section>  
   
   <!-- About Section -->
   <section id="about" class="full-page">
-    <img src="images/PLRS_image.png" alt="About Image">
+    <img src="images/pp1.jpg" alt="About Image">
     <div class="about-me">
-        <h2>About</h2>
-        <p>Hello! I'm a fifth year Engineering Physics student at the University of British Columbia. 
+        <h2 class="kumbh-sans-header">About</h2>
+        <p class="kumbh-sans">Hello! I'm a fifth year Engineering Physics student at the University of British Columbia. 
           I study a mix of mechanical, electrical, and computer engineering with a focus on physics and applied 
           math to create a fundamental understanding of how and why things work. Through elective courses 
           and projects, I have a breadth of knowledge in areas such as robotics, autonomous control,  
           embedded systems, web game design, composites manufacturing, machine learning, and more. 
           I also love having hobbies on the side like sewing (including designing my own clothes), 
-          travelling, and reading.</p>
-        <br>
-        <p>I built this website from scratch as a fun challenge and to showcase the various projects 
+          travelling, and reading.
+        <br><br>
+        I built this website from scratch as a fun challenge and to showcase the various projects 
             I've been working on for the past few years. (P.S. I'm still working on improving mobile 
-            compatability, so beware modile users.) I love making things, especially if I can be creative 
+            compatability, so beware mobile users.) I love making things, especially if I can be creative 
             in making them both functional and beautiful.
         </p>
     </div>
@@ -80,16 +81,16 @@
       <!-- Projects Section -->
       <section id="projects" class="full-page">
         <div class="content">
-            <h2>Projects</h2>
+            <h2 class="kumbh-sans-header">Projects</h2>
             <div class="filter">
-                <p>Filter:</p>
+                <p class="kumbh-sans">Filter:</p>
                 <!-- Filter Buttons -->
-                <button class="filter-btn" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="mech">MECH</button>
-                <button class="filter-btn" data-filter="elec">ELEC</button>
-                <button class="filter-btn" data-filter="soft">SOFT</button>
-                <button class="filter-btn" data-filter="design">Design Team</button>
-                <button class="filter-btn" data-filter="other">Other</button>
+                <button class="filter-btn kumbh-sans" data-filter="all">All</button>
+                <button class="filter-btn kumbh-sans" data-filter="mech">MECH</button>
+                <button class="filter-btn kumbh-sans" data-filter="elec">ELEC</button>
+                <button class="filter-btn kumbh-sans" data-filter="soft">SOFT</button>
+                <button class="filter-btn kumbh-sans" data-filter="design">Design Team</button>
+                <button class="filter-btn kumbh-sans" data-filter="other">Other</button>
             </div>
             <div class="cards">
                 <a href="src/plrs.html" class="card" data-tags="design mech">
@@ -97,7 +98,7 @@
                     <img src="./images/plrs-cover.jpg">
                   </div>
                     <h3>POLARIS</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">MECH</span>
                         <span class="tag">Design Team</span>
                     </div>
@@ -107,7 +108,7 @@
                     <img src="./images/lora-cover.jpg">
                   </div>
                     <h3>LoRa Pet Tracker</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">ELEC</span>
                         <span class="tag">SOFT</span>
                         <span class="tag">MECH</span>
@@ -118,7 +119,7 @@
                     <img src="./images/cobot-cover.png">
                   </div>
                     <h3>TMS Cobot</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">SOFT</span>
                     </div>
                 </a>
@@ -127,7 +128,7 @@
                     <img src="./images/mldrv-cover.png">
                   </div>
                     <h3>ML Driving Competition</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">SOFT</span>
                     </div>
                 </a>
@@ -136,7 +137,7 @@
                     <img src="./images/robotsummer-cover.jpg">
                   </div>
                     <h3>Autonomous Treasure Hunter</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">ELEC</span>
                         <span class="tag">SOFT</span>
                         <span class="tag">MECH</span>
@@ -147,17 +148,17 @@
                     <img src="./images/boom2.png">
                   </div>
                     <h3>Raye Boom Post</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">MECH</span>
                         <span class="tag">Design Team</span>
                     </div>
                 </a>
                 <a href="src/sewing.html" class="card" data-tags="other">
                   <div class="card-image-container">
-                    <img src="./images/raye-cover.png">
+                    <img src="./images/sewing1.jpg">
                   </div>
                   <h3>Sewing</h3>
-                  <div class="tags">
+                  <div class="tags kumbh-sans">
                       <span class="tag">Other</span>
                   </div>
                 </a>
@@ -166,7 +167,7 @@
                       <img src="./images/my-travel-map.png">
                     </div>
                     <h3>Travelling</h3>
-                    <div class="tags">
+                    <div class="tags kumbh-sans">
                         <span class="tag">Other</span>
                     </div>
                   </a>
@@ -174,15 +175,14 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+
     <footer id="footer">
       <div class="footer-content">
-          <p>Made by Margaret 2025</p>
+          <p class="kumbh-sans">Made by Margaret 2025</p>
       </div>
     </footer>
 
     <script>
-      // JavaScript for filtering projects
         document.querySelectorAll('.filter-btn').forEach(button => {
         button.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');

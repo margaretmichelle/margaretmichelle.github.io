@@ -1,43 +1,7 @@
-/* Table of Contents Sidebar */
-/* #toc {
-    position: fixed;
-    top: 15%;
-    left: 20px;
-    width: 200px;
-    padding: 20px;
-    z-index: 1000;
-}
-
-#toc h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-#toc ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#toc ul li {
-    margin: 10px 0;
-}
-
-#toc ul li a {
-    text-decoration: none;
-    color: #2d3748;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#toc ul li a:hover {
-    color: #3182ce;
-} */
-
 html {
     background: linear-gradient(#ffffff80, rgba(255, 255, 255, 0.5)), url('../images/noise.png');
     background-blend-mode: screen;
-    background-size: 200px 200px;
+    background-size: 300px 300px;
 }
 
 html, body {
@@ -45,6 +9,17 @@ html, body {
     flex-direction: column;
     height: 100%;
     margin: 0;
+    color: #3f3f46;
+    font-family: "Kumbh Sans", serif, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "YOPQ" 300;
+}
+
+h2 {
+    text-align: left;
 }
 
 main {
@@ -56,11 +31,13 @@ main {
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 10px;
+
 }
 
     .header h1 {
         font-size: 2.5rem;
         color: #333;
+        margin: 0;
     }
 
 .project {
@@ -70,35 +47,31 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
     }
-    
-    .project p {
-    font-size: 1rem;
-    }
 
-/* Container for the two columns */
 #tools-overview .container {
     display: flex;
     justify-content: space-between;
     width: 700px;
     max-width: 100%;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
     align-items: flex-start;
 }
 
 /* Left Column: Tools */
 .left-column {
-    width: 30%; /* Width for the left column */
+    width: 30%;
     /* padding: 20px; */
 }
 
 .left-column h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .left-column ul {
     list-style-type: disc;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .left-column ul li {
@@ -123,7 +96,6 @@ main {
     color: #555;
 }
 
-/* Image Container */
 .p-image-container {
     max-width: 100%;
     margin:0 auto;
@@ -164,23 +136,11 @@ main {
 
   /* Next Project Button Styling */
 .next-project-btn {
-    position: fixed; /* Fix the button to the viewport */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    background-color: #3182ce; /* Button background color */
-    color: white; /* Text color */
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none; /* Remove underline */
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    color: #3f3f46;
+    font-size: 0.8rem;
+    text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.next-project-btn:hover {
-    background-color: #225e9e; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
 }
