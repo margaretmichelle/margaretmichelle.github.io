@@ -1,0 +1,551 @@
+:root {
+    --grey1: #c2c2c2;
+    --grey2: #a8a8a8;
+    --grey3: #3f3f46;
+    --blue1: #2d9dff;
+    --blue2: #9fc1db;
+}
+
+.cat-svg {
+    width: auto;
+    height: 80px;
+    margin-left: auto;
+    padding-top: 20px;
+    transform: scaleX(-1);
+    /* animation: walk 20s linear infinite; */
+}
+
+.head {
+    fill: var(--grey1);
+}
+
+.ear {
+    fill: var(--grey2);
+}
+
+.collar {
+    fill: var(--grey2);
+}
+
+.tracker {
+    fill: var(--blue1);
+    transform-origin: 55%  5%;
+    transform-box: fill-box;
+    animation: rotate 1s linear infinite alternate;
+}
+
+.lora {
+    stroke: var(--grey3);
+    stroke-width: 0.3px;
+    fill: transparent;
+    stroke-linecap: round;
+    transform-origin: -150% 50%;
+    transform-box: fill-box;
+    animation: waves 3s infinite;
+}
+
+
+.whiskers {
+    stroke: var(--grey2);
+    stroke-width: 0.3px;
+    stroke-linecap: round;
+}
+
+.body {
+    stroke: var(--grey1);
+    stroke-width: 10.4px;
+    stroke-linecap: round;
+}
+
+.leg1, .leg2 {
+    stroke: var(--grey2);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: rotateLeg 1s linear infinite alternate;
+}
+
+.leg3, .leg4 {
+    stroke: var(--grey1);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: rotateLeg 1s linear infinite alternate-reverse;
+}
+
+.tail {
+    stroke: var(--grey1);
+    fill: transparent;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    animation: morphTail 2s infinite alternate;
+}
+
+.ground {
+    stroke: var(--grey3);
+    fill: transparent;
+    stroke-width: 0.1px;
+    animation: walk 10s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes waves {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+}
+
+@keyframes rotateLeg {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes morphTail {
+    0% {
+        d: path("M 9 15.5 c -1 -3 -2 -3 -4 -4 c -3 -2 -2 -6.5 0 -6.5");
+    }
+    100% {
+        d: path("M 9 15.5 c -1 -3 -2 -3 -4 -4 c -3 -2 -2 -6.5 0.4 -5.4");
+    }
+}
+
+/******************************************/
+
+.raye-svg {
+    width: auto;
+    height: 90px;
+    margin-left: auto;
+    padding-top: 10px;
+    animation: sailboatOscillation 15s linear infinite;
+}
+
+.raye {
+    fill: transparent;
+    stroke: var(--grey2);
+    stroke-width: 0.5px;
+}
+
+.raye-hull {
+    fill: #fd7a16;
+}
+
+@keyframes sailboatOscillation {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    5% {
+        transform: translateY(-3px) translateX(-30px);
+    }
+    10% {
+        transform: translateY(0px) translateX(-60px);
+    }
+    15% {
+        transform: translateY(1px) translateX(-90px);
+    }
+    20% {
+        transform: translateY(0) translateX(-120px);
+    }
+    25% {
+        transform: translateY(-3px) translateX(-150px);
+    }
+    30% {
+        transform: translateY(0) translateX(-180px);
+    }
+    35% {
+        transform: translateY(2px) translateX(-210px);
+    }
+    40% {
+        transform: translateY(0) translateX(-240px);
+    }
+    45% {
+        transform: translateY(-3px) translateX(-270px);
+    }
+    50% {
+        transform: translateY(0) translateX(-300px) scaleX(-1);
+        
+    }
+    55% {
+        transform: translateY(-3px) translateX(-270px) scaleX(-1);
+    }
+    60% {
+        transform: translateY(0) translateX(-240px) scaleX(-1);
+    }
+    65% {
+        transform: translateY(1px) translateX(-210px) scaleX(-1);
+    }
+    70% {
+        transform: translateY(0) translateX(-180px) scaleX(-1);
+    }
+    75% {
+        transform: translateY(-4px) translateX(-150px) scaleX(-1);
+    }
+    80% {
+        transform: translateY(0) translateX(-120px) scaleX(-1);
+    }
+    85% {
+        transform: translateY(1px) translateX(-90px) scaleX(-1);
+    }
+    90% {
+        transform: translateY(0px) translateX(-60px) scaleX(-1);
+    }
+    95% {
+        transform: translateY(-3px) translateX(-30px) scaleX(-1);
+    }
+    100% {
+        transform: translateY(0) translateX(0) scaleX(-1);
+    }
+}
+
+/******************************************/
+
+.plrs-svg {
+    width: auto;
+    height: 90px;
+    margin-left: auto;
+    padding-top: 5px;
+}
+
+.plrs {
+    fill: #dcdcdc7e;
+    /* fill: transparent; */
+    stroke: var(--grey2);
+    stroke-width: 0.3px;
+    transform-origin: 50%  60%;
+    transform-box: fill-box;
+    animation: sailboatPitch 5s linear infinite;
+}
+
+.waves {
+    fill: #2d9dff2d;
+    stroke: var(--blue1);
+    stroke-width: 0.2px;
+    animation: linearMotion 20s linear infinite;
+}
+
+@keyframes linearMotion {
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes sailboatPitch {
+    0% {
+        transform: rotate(3deg) translateY(0.5px);
+    }
+    30% {
+        transform: rotate(-1deg) translateY(0);
+    }
+    60% {
+        transform: rotate(3deg) translateY(-0.5px);
+    }
+    70% {
+        transform: rotate(-3deg) translateY(-0.5px);
+    }
+    100% {
+        transform: rotate(3deg) translateY(0.5px);
+    }
+}
+
+/******************************************/
+.cobot-svg {
+    width: auto;
+    height: 90px;
+    margin-left: auto;
+    padding-top: 8px;
+    transform: scaleX(-1);
+}
+
+.base {
+    fill: var(--grey1);
+}
+
+.arm {
+    fill: var(--grey2);
+}
+
+.arm-group{
+    transform-origin: 17% 81%;
+    transform-box: fill-box;
+    animation: rotateArm 4s linear infinite alternate;
+}
+
+.shoulder {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.elbow {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.forearm-group {
+    animation: forearm 4s linear infinite alternate;
+}
+
+.forearm {
+    fill: var(--grey1);
+    transform-origin: 7% 4%;
+    transform-box: fill-box;
+    animation: rotateForearm 4s linear infinite alternate;
+}
+
+.wrist-group {
+    transform-origin: 30% 90%;
+    transform-box: fill-box;
+    animation: rotateWrist 4s linear infinite alternate;
+}
+
+.wrist {
+    fill: var(--grey2);
+}
+
+.wristcaps {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.hand {
+    fill: var(--grey1);
+}
+
+.eye {
+    fill: var(--grey3);
+    stroke: #ffffff;
+    stroke-width: 0.2px;
+}
+
+@keyframes rotateArm {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes forearm {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    40% {
+        transform: translateX(1.3px) translateY(1.9px);
+    }
+    80% {
+        transform: translateX(2.3px) translateY(4.2px);
+    }
+    100% {
+        transform: translateX(2.3px) translateY(4.2px);
+    }
+}
+
+@keyframes rotateForearm {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes rotateWrist {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    40% {
+        transform: translateX(1.4px) translateY(-1.5px) rotate(0deg);
+    }
+    80% {
+        transform: translateX(2.5px) translateY(-3.2px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(2.5px) translateY(-3.2px) rotate(25deg);
+    }
+}
+
+/******************************************/
+.randy-svg {
+    width: auto;
+    height: 90px;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.robot-group{
+    animation: robotDrive 7s linear infinite;
+}
+
+.robot {
+    fill: var(--grey2);
+    stroke: var(--grey3);
+    stroke-width: 0.05px;
+}
+
+.claw {
+    fill: var(--grey3);
+}
+
+.wheel {
+    fill: var(--grey1);
+    stroke: var(--grey3);
+    stroke-width: 0.05px;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: rotateWheel 7s linear infinite;
+}
+
+.ball {
+    fill: var(--grey3);
+}
+
+.idol {
+    fill: #efbf04;
+    stroke: #f3cc2e;
+    stroke-width: 0.2px;
+    transform-origin: 50% 100%;
+    transform-box: fill-box;
+    animation: idol 1s ease infinite alternate;
+}
+
+.rock {
+    fill: var(--grey1);
+    stroke: var(--grey2);
+    stroke-width: 0.3px;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: rock 7s linear infinite;
+}
+
+@keyframes robotDrive {
+    0% {
+        transform: translateX(-130px);
+    }
+    40% {
+        transform: translateX(-58px);
+    }
+    100% {
+        transform: translateX(120px);
+    }
+}
+
+@keyframes rotateWheel {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(1200deg);
+    }
+    100% {
+        transform: rotate(4000deg);
+    }
+}
+
+@keyframes idol {
+    0% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes rock {
+    0% {
+        transform: translateX(-130px);
+    }
+    100% {
+        transform: translateX(90px) rotate(1500deg);
+    }
+}
+
+/******************************************/
+.ml-svg {
+    width: auto;
+    height: 35px;
+    margin-left: auto;
+    padding-top: 0px;
+    transform-origin: 30% 50%;
+    transform-box: fill-box;
+    animation: mlDrive 10s ease infinite;
+}
+
+.ml-robot-body {
+    fill: var(--grey1);
+    stroke: var(--grey3);
+    stroke-width: 0.05px;
+}
+
+.ml-robot-wheels {
+    fill: var(--grey3);
+}
+
+@keyframes mlDrive {
+    0% {
+        transform: translateX(-250px) translateY(0px) rotate(0deg);
+    }
+    30% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    38% {
+        transform: translateX(0px) translateY(0px) rotate(90deg);
+    }
+    45% {
+        transform: translateX(0px) translateY(50px) rotate(90deg);
+    }
+    52% {
+        transform: translateX(0px) translateY(50px) rotate(180deg);
+    }
+    80% {
+        transform: translateX(-250px) translateY(50px) rotate(180deg);
+    }
+    88% {
+        transform: translateX(-250px) translateY(50px) rotate(270deg);
+    }
+    93% {
+        transform: translateX(-250px) translateY(0px) rotate(270deg);
+    }
+    100% {
+        transform: translateX(-250px)translateY(0px) rotate(360deg);
+    }
+}
