@@ -29,7 +29,7 @@ main {
 .header-container {
     display: flex;
     align-items: center;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -43,13 +43,12 @@ main {
 }
 
     .header h1 {
-        font-size: 2.5rem;
-        color: #333;
+        font-size: 2.5em;
         margin: 0;
     }
 
 .project {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
     line-height:1.6;
     margin-top: 20px;
@@ -59,7 +58,7 @@ main {
 #tools-overview .container {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 720px;
     max-width: 100%;
     margin: 0 auto;
     align-items: flex-start;
@@ -68,40 +67,33 @@ main {
 /* Left Column: Tools */
 .left-column {
     width: 30%;
-    /* padding: 20px; */
 }
 
 .left-column h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     margin-bottom: 10px;
     text-align: left;
 }
 
 .left-column ul {
     list-style-type: disc;
-    padding-left: 5px;
+    padding-left: 1.5em;
+    list-style-position: inside;
 }
 
 .left-column ul li {
-    font-size: 16px;
     margin-bottom: 5px;
+    text-indent: -1.5em;
 }
 
 /* Right Column: Overview */
 .right-column {
-    width: 65%; /* Width for the right column */
-    /* padding: 20px; */
+    width: 65%;
 }
 
 .right-column h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     margin-bottom: 10px;
-}
-
-.right-column p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
 }
 
 .p-image-container {
@@ -116,7 +108,7 @@ main {
   
   .portfolio-image {
     /* width: 400px; */
-    max-width: 700px;
+    max-width: 720px;
     max-height: 60vh;
     /* height: auto; */
     border-radius: 2px;
@@ -136,19 +128,13 @@ main {
     list-style-position: inside;
   }
 
-  .image-container h2 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: white;
-  }
-
   /* Next Project Button Styling */
 .next-project-btn {
     position: fixed;
     bottom: 40px;
     right: 50px;
     color: #3f3f46;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     text-decoration: none;
     cursor: pointer;
 }
