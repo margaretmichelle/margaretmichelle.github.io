@@ -39,6 +39,10 @@ html {
     scroll-padding-top: 60px;
   }
 
+b {
+  font-weight: 600;
+}
+
 .navbar {
     background-color: #fdf9ff;
     background-image: url('images/noise.png');
@@ -158,8 +162,8 @@ html {
 
 .full-page#home .text {
     position: absolute;
-    max-width: 700px;
-    padding-top: 30px;
+    max-width: 40%;
+    padding-top: 4%;
     padding-left: 50px;
     top: 15%;
     left: 10%;
@@ -168,7 +172,7 @@ html {
 }
 
 .full-page#home h1 {
-    font-size: 6rem;
+    font-size: clamp(4rem, 4vw + 1rem, 8rem);
     letter-spacing: 2px;
     margin-bottom: 0;
     margin-top: 0;
@@ -176,7 +180,7 @@ html {
 }
 
 .full-page#home p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.2vw, 2rem);
     line-height: 1.6;
     margin-bottom: 0;
     color: #3f3f46;
@@ -258,7 +262,7 @@ html {
   }
 
 h2 {
-    font-size: 2rem; /* Adjust header size */
+    font-size: clamp(1rem, 1vw + 1rem, 3rem); /* Adjust header size */
     margin-bottom: 10px; /* Space below the header */
     letter-spacing: 2px;
     text-align: center;
@@ -266,7 +270,7 @@ h2 {
 }
 
 .about-me p {
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 0.5vw + 0.5rem, 2rem);
     line-height: 1.6;
     color: #3f3f46;
 }
@@ -301,7 +305,7 @@ h2 {
   padding-bottom: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 22vw;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -331,7 +335,7 @@ h2 {
 
 .card p {
   margin-bottom: 10px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .card::after {
@@ -350,8 +354,8 @@ h2 {
 }
 
 .card-image-container {
-  width: 350px;
-  height: 130px;
+  width: 22vw;
+  height: 8.5vw;
   overflow: hidden;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 15px;
@@ -402,6 +406,83 @@ h2 {
 .filter-btn:hover {
   text-decoration: underline;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  background-image: url('images/noise.png');
+  background-size: 300px 300px;
+  padding: 30px 4% 2% 4%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 60%;
+  max-width: 1200px;
+  max-height: 90vh;
+  position: relative;
+  overflow: auto;
+}
+
+.modal-title {
+  text-align: left;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-main-image {
+  width: 100%;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-main-image img {
+  width: 70%;
+  height: auto;
+  border-radius: 1px;
+}
+
+.modal-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  grid-column: span 2;
+}
+
+.modal-corner-image {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 30%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
 
 /* Footer Styling */
 #footer {

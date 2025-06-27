@@ -31,145 +31,120 @@
       </nav>
 
     <main>
-        <div class="header-container">
-            <div class="header">
-                <h1>Robot Summer</h1>
-                <p>| ENPH 253 | 2022 |</p>
-            </div>
-            <svg class="randy-svg" viewBox="-85 0 121 22" xmlns="http://www.w3.org/2000/svg">
-                <g class="robot-group">
-                    <path
-                        class="idol"
-                        d="M30.8 11.9l1.4 3.8 1.9-.7a1 1-20 00-.5-.6l-.5-1.5.1-.4c.1-.3-.6-.4-.2-1l-.1-.2 0-.5c-.6-1.2-2.5.2-2.1 1.1"
-                    />
-                    <path
-                        class="robot"
-                        d="M30 20.5h10v-1.7h-10zm0-1.7v-3.5h1v-1.9h7.3v2h1.7v3.4"
-                    />
-                    <path
-                        class="claw"
-                        d="M34 17.5h2v-1.4h-2v1.4m2-1.4h.8v-2.2h.5v2.5h-1.3m-2-.3h-.8v-2.2h-.5v2.5h1.3"
-                    />
-                    <path
-                        class="wheel"
-                        d="M31 19.8a1 1 0 003.2 0 1 1 0 00-3.2 0m.6 0a1 1 0 001.7.7m-1.1-1.6a1 1 0 011.3.7 1 1 0 00-1.3-.7"
-                    />
-                    <path
-                        class="ball"
-                        d="M36.5 20.5a1.2 1.2 0 002.3 0"
-                    />
-                </g>
-    
-                <path
-                    class="rock"
-                    d="M6.5 21.7a1 1 0 000-12.3 1 1 0 000 12.3m4.1-6.5q0 2.1-1.4 2.8 1.4-.7 1.4-2.8m-5.8-4.6q-1.1 0-1.7 1m2.2 3.5q-.2 1.4-1 1.7.8-.3 1-1.7m1.9-2.7c-.5.7 1.4.6 1.1 1.1.3-.5-1.6-.4-1.1-1.1M4 19.7c.6-.4 1.8-.1 2.7.8-.9-.9-2.1-1.2-2.7-.8m-1.1-4.9c-.4-.1-.8.5-1.1-.3.3.8.7.2 1.1.3m6 4.8c.5-.2.9.4 1.4-.5"
-                />
-            </svg>
-        </div>
-        <div id="tools-overview">
-            <div class="container">
-                <!-- Left Column: Tools -->
-                <div class="left-column">
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>Rapid prototyping</li>
-                        <li>Onshape</li>
-                        <li>Laser cutting</li>
-                        <li>3D  printing</li>
-                        <li>Circuit design and troubleshooting</li>
-                        <li>Soldering</li>
-                        <li>C++</li>
-                        <li>STM32 Blue Pill MCUs</li>
-                    </ul>
+        <div class="wrapper">
+            <div class="grid-container">
+                <div class="header">
+                    <h1>Robot Summer</h1>
+                    <p>| ENPH 253 | 2022 |</p>
                 </div>
-
-                <!-- Right Column: Overview -->
-                <div class="right-column">
-                    <h2>Overview</h2>
-                    <p>During the summer after the second year of Engineering Physics, there is a robot competition; 
-                        our year's theme was treasure hunting. An obstacle course was created with a variety of challenges and idols 
+                <aside class="project-svg" style="grid-column:span 5;">
+                    <svg class="randy-svg" viewBox="-85 0 121 22" xmlns="http://www.w3.org/2000/svg">
+                        <g class="robot-group">
+                            <path class="idol" d="M30.8 11.9l1.4 3.8 1.9-.7a1 1-20 00-.5-.6l-.5-1.5.1-.4c.1-.3-.6-.4-.2-1l-.1-.2 0-.5c-.6-1.2-2.5.2-2.1 1.1"/>
+                            <path class="robot" d="M30 20.5h10v-1.7h-10zm0-1.7v-3.5h1v-1.9h7.3v2h1.7v3.4"/>
+                            <path class="claw" d="M34 17.5h2v-1.4h-2v1.4m2-1.4h.8v-2.2h.5v2.5h-1.3m-2-.3h-.8v-2.2h-.5v2.5h1.3"/>
+                            <path class="wheel" d="M31 19.8a1 1 0 003.2 0 1 1 0 00-3.2 0m.6 0a1 1 0 001.7.7m-1.1-1.6a1 1 0 011.3.7 1 1 0 00-1.3-.7"/>
+                            <path class="ball" d="M36.5 20.5a1.2 1.2 0 002.3 0"/>
+                        </g>
+                        <path class="rock" d="M6.5 21.7a1 1 0 000-12.3 1 1 0 000 12.3m4.1-6.5q0 2.1-1.4 2.8 1.4-.7 1.4-2.8m-5.8-4.6q-1.1 0-1.7 1m2.2 3.5q-.2 1.4-1 1.7.8-.3 1-1.7m1.9-2.7c-.5.7 1.4.6 1.1 1.1.3-.5-1.6-.4-1.1-1.1M4 19.7c.6-.4 1.8-.1 2.7.8-.9-.9-2.1-1.2-2.7-.8m-1.1-4.9c-.4-.1-.8.5-1.1-.3.3.8.7.2 1.1.3m6 4.8c.5-.2.9.4 1.4-.5"/>
+                    </svg>
+                </aside>
+                <div class="summary-box">
+                    <h4>Overview:</h4> <p>During the summer after the second year of Engineering Physics, there is a themed robot competition 
+                        where classmates form teams of four, design and build an autonomous robot in a few months, and compete against each other; 
+                        our year's theme was treasure hunting, Uncharted-style. An obstacle course was created with a variety of challenges and idols 
                         to steal. (Full details can be found <a href="https://docs.google.com/document/d/1afycNco4FRzXLfZkPD-eP0gbRWBenPrVKCEsRB9k1gs/edit?usp=sharing">here</a>.) 
-                        My team of 4 designed and built a fully autonomous, wheeled robot that made it to the quarter finals and competed 
+                        My team designed and built a fully autonomous, wheeled robot that made it to the quarter finals and competed 
                         in an instant death match against the winning team. We modeled, laser cut, 3D printed, and assembled the chassis; 
                         designed, soldered, and tested all our circuits; developed, integrated, tested, and optimized our C++ code until we 
-                        had a robot that could consistently line follow and retrieve idols.
-                        </p>
+                        had a robot that could consistently line follow, retrieve idols, and overcome obstacles.
+                    </p>
                 </div>
+                <div class="keywords-box">
+                    <span class="keyword-tag">Rapid prototyping</span>
+                    <span class="keyword-tag">Onshape</span>
+                    <span class="keyword-tag">Laser cutting</span>
+                    <span class="keyword-tag">3D printing</span>
+                    <span class="keyword-tag">Circuit design and troubleshooting</span>
+                    <span class="keyword-tag">Soldering</span>
+                    <span class="keyword-tag">STM32 Blue Pill</span>
+                </div>
+                <div class="main-content">
+                    
+                    <figure>
+                        <div class="p-image-container">
+                            <img src="../images/robotsummer6.png" alt="CAD robot on competition surface" class="portfolio-image">
+                        </div>
+                        <figcaption>Early CAD of robot on competition surface</figcaption>
+                    </figure>
+                    
+                    <br>
+                    <h3>Robot Functions</h3>
+                    <p>
+                        <ul>
+                            <li>Line following using IR photoelectric sensors and PID</li>
+                            <li>Object detection using ultrasonic sensors</li>
+                            <li>Object pickup, including self-positioning and dropping into storage basket</li>
+                            <li>Magnet detection using Hall effect sensors</li>
+                            <li>Bridge deployment to cross a chasm</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h3>My Contributions</h3>
+                    <p>
+                        <ul>
+                            <li>Designed claw in Onshape and laser cut from acrylic sheets</li>
+                            <li>Organized GPIO pin assignment for two STM32 microcontrollers (acting as master and slave) connected to the motors, sensors, and power</li>
+                            <li>Programmed object detection and claw operation</li>
+                            <li>Assisted in programing navigation system including interrupt handlers and PID control</li>
+                            <li>Created a UI to see real time sensor data and modify PID coefficients to facilitate and expedite testing</li>
+                            <li>Designed and soldered circuits for motor driving and photoelectric sensor signal filtering</li>
+                            <li>Conducted full system testing</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <div class="gallery-row">
+                        <div class="gallery-element" style="width:calc(100% * 0.6745);">
+                            <img src="../images/robotsummer7.png" alt="CAD of robot">
+                            <figcaption>CAD of robot chassis and early 4-bar linkage claw</figcaption>
+                        </div>
+                        <div class="gallery-element" style="width:calc(100% * 0.3255);">
+                            <video controls muted>
+                                <source src="../images/robotsummer1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Early prototype robot showcasing line following ability</figcaption>
+                        </div>
+                    </div>
+                    <div class="gallery-row">
+                        <div class="gallery-element" style="width:100%;">
+                            <video controls muted>
+                            <source src="../images/robotsummer8.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+                            <figcaption>Robot picking up first and second idols on the competition course</figcaption>
+                        </div>
+                    </div>
+                    <div class="gallery-row">
+                        <div class="gallery-element" style="width:calc(100% * 0.4905);">
+                            <img src="../images/robotsummer4.jpg" alt="Double H-bridge circuit">
+                            <figcaption>Double H-bridge circuit I designed for motor control before switching to custom PCB</figcaption>
+                        </div>
+                        <div class="gallery-element" style="width:calc(100% * 0.5094);">
+                            <img src="../images/robotsummer5.jpg" alt="Me working on stitching together our wooden panels">
+                            <figcaption>UI module I created to monitor sensor outputs and internal variables and change PID coefficients and robot modes during testing</figcaption>
+                        </div>
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    
+                    <a href="boom.html" class="next-project-btn">
+                        &rarr;
+                    </a>
+                </aside>
             </div>
         </div>
-        <br>
-  
-      <section class="project">
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/robotsummer6.png" alt="CAD robot on competition surface" class="portfolio-image">
-                <figcaption>Early CAD of robot on competition surface</figcaption>
-            </figure>
-        </div>
-        <br>
-        <h3>Robot Functions</h3>
-        <p>
-            <ul>
-                <li>Line following using IR photoelectric sensors and PID</li>
-                <li>Object detection using ultrasonic sensors</li>
-                <li>Object pickup, including self-positioning and dropping into storage basket</li>
-                <li>Magnet detection using Hall effect sensors</li>
-                <li>Bridge deployment to cross a chasm</li>
-            </ul>
-        </p>
-            <br>
-            <h3>My Contributions</h3>
-        <p>
-            <ul>
-                <li>Designed claw in Onshape and laser cut from acrylic sheets</li>
-                <li>Organized GPIO pin assignment for two STM32 microcontrollers (acting as master and slave) connected to the motors, sensors, and power</li>
-                <li>Programmed object detection and claw operation</li>
-                <li>Assisted in programing navigation system including interrupt handlers and PID control</li>
-                <li>Created a UI to see real time sensor data and modify PID coefficients to facilitate and expedite testing</li>
-                <li>Designed and soldered circuits for motor driving and photoelectric sensor signal filtering</li>
-                <li>Conducted full system testing</li>
-            </ul>
-        </p>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/robotsummer7.png" alt="CAD of robot" class="portfolio-image">
-                <figcaption>CAD of robot chassis and early 4-bar linkage claw</figcaption>
-            </figure>
-        </div>
-        <div class="p-image-container">
-            <video width="auto" height="450px" controls class="portfolio-video" muted>
-                <source src="../images/robotsummer1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-              <figcaption>Early prototype robot showcasing line following ability</figcaption>
-        </div>
-        <div class="p-image-container">
-            <video width="700px" height="auto" controls class="portfolio-video" muted>
-                <source src="../images/robotsummer8.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-              <figcaption>Robot picking up first and second idols on the competition course</figcaption>
-        </div>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/robotsummer4.jpg" alt="Double H-bridge circuit" class="portfolio-image">
-                <figcaption>Double H-bridge circuit I designed for motor control before switching to custom PCB</figcaption>
-            </figure>
-        </div>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/robotsummer5.jpg" alt="Me working on stitching together our wooden panels" class="portfolio-image">
-                <figcaption>UI module I created to monitor sensor outputs and internal variables and change PID coefficients and robot modes during testing</figcaption>
-            </figure>
-        </div>
-      </section>
-
     </main>
-
-    <a href="boom.html" class="next-project-btn">
-        Go to Next Project &rarr;
-    </a>
-
 
     <!-- Footer Section -->
     <footer id="footer">
@@ -179,4 +154,4 @@
       </footer>
 
   </body>
-  </html>
+</html>

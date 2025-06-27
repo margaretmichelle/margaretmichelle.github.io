@@ -1,13 +1,13 @@
-.resume {
-    max-width: 720px;
-    margin: auto;
-    margin-top: 50px;
-}
-
 html {
-    background: linear-gradient(#ffffff80, rgba(255, 255, 255, 0.5)), url('../images/noise.png');
+    background: linear-gradient(#ffffff80, rgba(255, 255, 255, 0.5)), url('images/noise.png');
     background-blend-mode: screen;
     background-size: 300px 300px;
+}
+
+.resume {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 html, body {

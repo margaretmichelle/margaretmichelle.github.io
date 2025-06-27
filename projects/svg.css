@@ -8,8 +8,8 @@
 
 .cat-svg {
     width: auto;
-    height: 80px;
-    margin-left: auto;
+    height: 90px;
+    margin-right: 10px;
     padding-top: 20px;
     transform: scaleX(-1);
     /* animation: walk 20s linear infinite; */
@@ -43,7 +43,6 @@
     transform-box: fill-box;
     animation: waves 3s infinite;
 }
-
 
 .whiskers {
     stroke: var(--grey2);
