@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="resume.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <span class="menu-toggle">&#9776;</span>
           <ul class="nav-links">
             <li><a href="index.html#home" class="nav-item">Home</a></li>
             <li><a href="index.html#about" class="nav-item">About</a></li>
@@ -47,15 +53,23 @@
         <hr>
         <p><i>The University of British Columbia | Vancouver, Canada<span style="float:right;">09/2020 – 04/2026</span> </i>
         <br><b>Engineering Physics, BASc</b>
-        <br><span style="font-size:0.9em;">Awards: Trek Excellence Scholarship (2022), Dean’s Honour List (2020-2023), Cumulative GPA: 4.00/4.33</span>
+        <br><span style="font-size:0.9em;">Awards: Roy Nodwell Memorial Prize (2025), Dean’s Honour List (2020-2025), Trek Excellence Scholarship (2022)</span>
         <br><br>
         <i>ETH Zurich | Zurich, Switzerland<span style="float:right;">09/2023 – 02/2024</span> </i>
         <br><b>Mechanical Engineering, International Exchange</b>
-        <br><span style="font-size:0.8em;">Courses: Robot Dynamics, Microrobotics, Virtual Reality II, Distinguished Seminar in Robotics, Systems, and Control, Space Research and Exploration</span>
+        <br><span style="font-size:0.9em;">Courses: Robot Dynamics, Microrobotics, Virtual Reality II, Distinguished Seminar in Robotics, Systems, and Control, Space Research and Exploration</span>
         </p>
 
         <h2>WORK EXPERIENCE</h2>
         <hr>
+        <p><i>Cyber-Physical Systems Group, University of Konstanz | Konstanz, Germany<span style="float:right;">05/2025 – Present</span> </i>
+        <br><b>Swarm Robotics Research Intern</b>
+        <ul>
+            <li>Developing autonomous sailboats to implement swarm control and contribute to limnological research</li>
+            <li>Implementing multimodal obstacle detection using an mmWave sensor, fisheye camera, and thermal camera with a Raspberry Pi for real-time obstacle avoidance while sailing on Lake Constance</li>
+            <li>Developing classical computer vision Python algorithms for object segmentation and sensor fusion</li>
+        </ul>
+        </p>
         <p><i>Microchip Technology Inc. | Burnaby, Canada<span style="float:right;">05/2023 – 08/2023</span> </i>
         <br><b>Product Engineer</b>
         <ul>
@@ -73,43 +87,44 @@
             </ul>
         </p>
 
-        <h2>TECHNICAL PROJECTS</h2>
+        <h2>PROJECTS</h2>
         <hr>
-        <p><i>UBC Engineering Physics Project Lab | Vancouver, Canada<span style="float:right;">09/2024 – Present</span> </i>
+        <p><i>UBC Engineering Physics Project Lab | Vancouver, Canada<span style="float:right;">09/2024 – 04/2025</span> </i>
         <br><b>LoRa Pet Tracker</b>
         <ul>
-            <li>Designing PCBs integrating LoRa, GPS, and IMU modules to create a compact, low-power pet tracker with 48+ hours of battery life for real-time location monitoring via mobile app within a communication network</li>
-            <li>Developing custom C++ libraries for drivers and data processing, optimizing low-power and long-range performance, while utilizing I2C and UART protocols for seamless sensor integration</li>
+            <li>Designed a PCB integrating LoRa, GPS, and IMU modules to create a compact, low-power pet tracker with 48+ hours of battery life for real-time location monitoring via mobile app within a communication network</li>
+            <li>Developed custom C and C++ libraries for drivers and data processing, optimizing low-power and long-range performance, utilizing I2C and UART protocols for seamless sensor integration</li>
+            <li>Awarded the Roy Nodwell Memorial Prize for a high professional standard, original contribution, and industrial relevance</li>
         </ul>
         </p>
         <p><i>UBC Sailbot Design Team | Vancouver, Canada<span style="float:right;">11/2021 – Present</span> </i>
-            <br><b>Interactive Media Developer</b>
+            <br><b>Polaris</b>
             <ul>
-                <li>Leading a 9-member team to design and build the hull and keel of a fully autonomous sailboat to collect oceanic data during weeks-long missions in the Pacific Ocean</li>
+                <li>Managed a 10-member team tasked with designing and building the hull and keel of a fully autonomous sailboat to collect oceanic data during weeks-long missions in the Pacific Ocean</li>
                 <li>Designed hull, bulkheads, and keel using structural and hydrodynamic analysis with Maxsurf, Ansys, Excel, and SolidWorks ensuring optimal performance and durability for our ocean missions</li>
-                <li>Manufactured hull from CFRP sandwich panels using hand layup and vacuum bagging techniques, meeting a tight 2-month timeline to allow generous integration time for sail, rudder, and electrical teams</li>
+                <li>Manufactured hull from CFRP sandwich panels using hand layup and vacuum bagging techniques</li>
             </ul>
         </p>
         <p><i>UBC Department of Psychiatry NINET Lab | Vancouver, Canada<span style="float:right;">09/2023 – 04/2024</span> </i>
             <br><b>Transcranial Magnetic Stimulation (TMS) Cobot System</b>
             <ul>
-                <li>Developed parts of a robotic system to increase the efficacy of TMS in treating depression using a UR3e cobot arm, IR camera, and physiological signals to target and stimulate specific points in the brain</li>
-                <li>Programmed the cobot arm in Python with ROS Noetic to implement smooth motion tracking using IR camera and force feedback with TF library for transformations between image space and robot space</li>
+                <li>Developed a robotic system to increase the efficacy of TMS in treating depression using a UR3e cobot arm, IR camera, and physiological signals to target and stimulate specific points in the brain</li>
+                <li>Programmed a cobot arm in Python with ROS Noetic to implement smooth motion tracking using IR camera and force feedback with TF library for transformations between image space and robot space</li>
             </ul>
         </p>
         <p><i>UBC Engineering Physics | Vancouver, Canada<span style="float:right;">09/2022 – 12/2022</span> </i>
-            <br><b>Transcranial Magnetic Stimulation (TMS) Cobot System</b>
+            <br><b>Machine Learning Driving Competition</b>
             <ul>
                 <li>Programmed a robot in Python to navigate an environment in Gazebo Simulator and analyze image data with OpenCV and classical computer vision using the ROS Noetic framework in Linux</li>
                 <li>Created PID control algorithms and RL models trained in OpenAI Gym for autonomous driving</li>
             </ul>
         </p>
 
-        <h2>TECHNICAL SKILLS</h2>
+        <h2>SKILLS</h2>
         <hr>
         <p><b>Mechanical</b>
         <br>SolidWorks, Ansys, Maxsurf, FDM 3D printing, Milling machine, Lathe, Composites (CFRP)
-        <b>Electrical</b>
+        <br><b>Electrical</b>
         <br>Oscilloscope, Signal generator, Soldering, Circuit board debugging, Altium
         <br><b>Software</b>
         <br>Python, C++, C, MATLAB, TypeScript, Git, OpenCV, TensorFlow, ROS, Linux</p>
@@ -124,6 +139,15 @@
             <p>Made by Margaret 2025</p>
         </div>
       </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

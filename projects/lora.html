@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="svg.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <span class="menu-toggle">&#9776;</span>
           <ul class="nav-links">
             <li><a href="../index.html#home" class="nav-item">Home</a></li>
             <li><a href="../index.html#about" class="nav-item">About</a></li>
@@ -31,107 +37,110 @@
       </nav>
 
     <main>
-      <div class="header-container">
-          <div class="header">
-              <h1>LoRa Pet Tracker</h1>
-              <p>| ENPH 479 | 2024-2025 |</p>
-          </div>
-              <svg class="cat-svg" viewBox="0 0 40 25" xmlns="http://www.w3.org/2000/svg">
-                  
-                  <path
-                      class="tail"
-                      d="M 9 15.5 c -1 -3 -2 -3 -4 -4 c -3 -2 -2 -6.5 0 -6.5"
-                  />
-                  <path
-                      class="leg1"
-                      d="M 20 17 v 6"
-                  />
-                  <path
-                      class="leg2"
-                      d="M 10.5 17 v 6"
-                  />
-                  <path
-                      class="leg3"
-                      d="M 20 17 v 6"
-                  />
-                  <path
-                      class="leg4"
-                      d="M 10.5 17 v 6"
-                  />
-      
-                  <path
-                      class="body"
-                      d="M 12 15.7 h 7.5"
-                  />
-      
-                  <path
-                      class="ear"
-                      d="M 25.2 3.5 c -0.2 -0.7 -0.4 -1.3 -0.6 -2 c -0.5 0.1 -0.99 0.682 -1.703 1.968 l 2.303 0.032"
-                  />
-                  <path
-                      class="head"
-                      d="M 24.7 15.3 q -0.7 -2.6 3.2 -4.3 c 0.5 -0.3 3.3 -3.1 1.2 -4.2 c -2.4 -0.6 -1.2 -3 -3.6 -3.3 q -0.9 -0.2 -2 -0.3 q -0.5 -1.1 -1.1 -2.1 c -1.3 0.4 -1.5 1.8 -2 3 c -3 2 -0.4 5.9 -2.9 6.9"
-                  />
-                  <path
-                      class="whiskers"
-                      d="M 28.2 8 l -3.2 0.5 M 28.3 8.2 l -4.5 1.8 M 28.3 8.4 l -3.2 2.3"
-                  />
-                  <path
-                      class="collar"
-                      d="M 18.3 10.4 c 0.4 1.4 2.7 3.6 6.4 3.3 l 0.3 -0.5 m 0 0 c -3 -0.2 -5 -0.2 -6.4 -3.7 l -0.3 0.9"
-                  />
-                  <path
-                      class="tracker"
-                      d="M 25 13.5 a 0.9 0.9 0 0 0 -1 1.8 a 0.9 0.9 0 0 0 1 -1.8"
-                  />
-                  <path
-                      class="lora"
-                      d="M 28.5 16 a 2 2 0 0 0 0 -3 m 1 4 a 4 4 0 0 0 0 -5 m 1 6 a 6 6 0 0 0 0 -7"
-                  />
-                  <path
-                      class="ground"
-                      d="M 0 24 h 40 m 5 0 h 50"
-                  />
-              </svg>
-          </div>
-        
-        <div id="tools-overview">
-            <div class="container">
-                <!-- Left Column: Tools -->
-                <div class="left-column">
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>Embedded systems</li>
-                        <li>Signal processing</li>
-                        <li>PCB design (Altium)</li>
-                        <li>C++</li>
-                        <li>P2P networking</li>
-                        <li>SolidWorks</li>
-                    </ul>
+        <div class="wrapper">
+            <div class="grid-container">
+                <div class="header">
+                    <h1>LoRa Pet Tracker</h1>
+                    <p>| ENPH 479 | 2024-2025 | <a href="2468 - LoRa Pet Tracker - Poster.pdf">See our poster</a></p>
                 </div>
-
-                <!-- Right Column: Overview -->
-                <div class="right-column">
-                    <h2>Overview</h2>
-                    <p>LoRa is a modulation technique used to encode information on radio waves for long-range applications 
-                        highly robust to noise. We are designing a system with LoRa, that goes on your cat's collar, in a 
-                        watertight enclosure, and provides live tracking updates to a custom mobile app using a GPS module. 
-                        Through the use of an IMU and custom firmware, we are creating a low-power embedded system that 
-                        can last for days before needing to be recharged.
-                        </p>
+                <aside class="project-svg">
+                    <svg class="cat-svg" viewBox="0 0 40 25" xmlns="http://www.w3.org/2000/svg">
+                        <path class="tail" d="M 9 15.5 c -1 -3 -2 -3 -4 -4 c -3 -2 -2 -6.5 0 -6.5" />
+                        <path class="leg1" d="M 20 17 v 6" />
+                        <path class="leg2" d="M 10.5 17 v 6" />
+                        <path class="leg3" d="M 20 17 v 6" />
+                        <path class="leg4" d="M 10.5 17 v 6" />
+                        <path class="body" d="M 12 15.7 h 7.5" />
+                        <path class="ear" d="M 25.2 3.5 c -0.2 -0.7 -0.4 -1.3 -0.6 -2 c -0.5 0.1 -0.99 0.682 -1.703 1.968 l 2.303 0.032" />
+                        <path class="head" d="M 24.7 15.3 q -0.7 -2.6 3.2 -4.3 c 0.5 -0.3 3.3 -3.1 1.2 -4.2 c -2.4 -0.6 -1.2 -3 -3.6 -3.3 q -0.9 -0.2 -2 -0.3 q -0.5 -1.1 -1.1 -2.1 c -1.3 0.4 -1.5 1.8 -2 3 c -3 2 -0.4 5.9 -2.9 6.9" />
+                        <path class="whiskers" d="M 28.2 8 l -3.2 0.5 M 28.3 8.2 l -4.5 1.8 M 28.3 8.4 l -3.2 2.3" />
+                        <path class="collar" d="M 18.3 10.4 c 0.4 1.4 2.7 3.6 6.4 3.3 l 0.3 -0.5 m 0 0 c -3 -0.2 -5 -0.2 -6.4 -3.7 l -0.3 0.9" />
+                        <path class="tracker" d="M 25 13.5 a 0.9 0.9 0 0 0 -1 1.8 a 0.9 0.9 0 0 0 1 -1.8" />
+                        <path class="lora" d="M 28.5 16 a 2 2 0 0 0 0 -3 m 1 4 a 4 4 0 0 0 0 -5 m 1 6 a 6 6 0 0 0 0 -7" />
+                        <path class="ground" d="M 0 24 h 40 m 5 0 h 50" />
+                    </svg>
+                </aside>
+                <div class="summary-box">
+                    <h4>Overview:</h4> <p>Over 1 million pets in Canada go missing each year, and over 80% of those who 
+                        are unchipped are never found. As someone who grew up with dogs, this is a heartbreaking 
+                        statistic. While technology exists to track our beloved pets, it's far from perfect, being too 
+                        costly, passive, or short-range. As my group's senior capstone project, we decided to address these 
+                        shortcomings and design and build our own pet tracking solution using LoRa. LoRa modulation is a technique 
+                        used to encode information on radio waves for long-range applications; it's free to use, energy 
+                        efficient, and highly robust to noise. We designed a compact, LiPo-powered PCB and collar that provides live 
+                        tracking updates to a custom mobile app. The PCB integrates LoRa, GPS, and IMU modules along with 
+                        a custom antenna to provide real-time, responsive monitoring of your pet.
+                    </p>
                 </div>
+                <div class="keywords-box">
+                    <span class="keyword-tag">Embedded systems</span>
+                    <span class="keyword-tag">Signal processing</span>
+                    <span class="keyword-tag">PCB design (Altium)</span>
+                    <span class="keyword-tag">C++</span>
+                    <span class="keyword-tag">C</span>
+                    <span class="keyword-tag">P2P networking</span>
+                    <span class="keyword-tag">STM32</span>
+                </div>
+                <div class="main-content">
+                    <div class="p-image-container">
+                            <img src="../images/lora4.jpg" alt="Project fair showcase" class="portfolio-image">
+                    </div>
+                    <figcaption>Our tracking collar, base station, mobile app showcased at our annual Engineering Physics project fair</figcaption>
+                    <p>We split this project up into three components: hardware and firmware, mobile app and database, antenna 
+                        and mechanical design. With one person each focusing on the latter two, my teammate and I tackled the 
+                        hardware and firmware coponents. We began prototyping with a SAMD21 Pro RF chip that has both a SAMD21 
+                        and RFM95W, an Adafruit PA1010D GPS module, and a STM32 LSM6DSOX IMU. Using Arduino to program, we experimented 
+                        with the parameters of LoRa modulation, range, and noise immunity. We developed different modes of operation: 
+                        normal, search, and sleep. The user-intitiated search mode sends GPS updates more frequently and transmits 
+                        stronger signals using higher power for when you need to actively search for your pet. The sleep mode is 
+                        dependent on the IMU readings; if your pet is stationary (e.g. when they're sleeping), the collar will 
+                        save energy and will not update the position until your pet moves again. We also implemented acknowledgment 
+                        handshakes and random backoff to ensure reliable connection and handle network collisions between the collar 
+                        and base station. Lastly, we tested the energy consumption of the components to select a LiPo battery that 
+                        would sustain the device operating in search mdoe (the most demanding mode) for multiple days before needing 
+                        to be charged.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/lora5.png" alt="System diagram" class="portfolio-image">
+                    </div>
+                    <figcaption>Simplified system diagram</figcaption>
+                    <p>For our PCB, we upgraded our components, replacing the SAMD21 Pro RF with a LoRa-E5 that integrates a STM32WLE5JC 
+                        and a LoRa module into a small package, and switched out our GPS for an Antenova M20071. We ported our previous 
+                        work in Arduino to the STM32 environment and wrote libraries for our GPS, IMU, and LoRa that built upon the STM32WLxx 
+                        drivers for the STM32WLE5JC to communicate with and command our modules over I2C and UART. I did most of the firmware 
+                        and assisted my teammate in designing the PCB in Altium, where I mainly focused on power connections and charging 
+                        of the device.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/lora1.png" alt="PCB 3D model" class="portfolio-image">
+                    </div>
+                    <div class="p-image-container">
+                        <img src="../images/lora2.png" alt="PCB schematic" class="portfolio-image">
+                    </div>
+                    <figcaption>Collar PCB model and schematic</figcaption>
+                    <p>Though we experienced issues integrating our collar PCB with our base station that still used the SAMD21 due 
+                        to a mismatch of LoRa parameters between the two systems, this project was a great learning experience and I 
+                        hope to continue working on it as a side project in the future. We were able to achieve a range of 1km in a 
+                        suburban environment with our prototype and had a beautiful app and full functionality within the loop between 
+                        the app, the server, the base station, and the collar. We were honoured to be awarded the Roy Nodwell Memorial 
+                        Prize given to a project that exhibits high professional standard, shows evidence of original contribution, 
+                        and has industrial relevance.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/lora3.jpg" alt="Being awarded the Roy Nodwell Prize" class="portfolio-image">
+                    </div>
+                    <figcaption>Thank you to the Engineering Physics Project Lab for sponsoring this project and for the award!</figcaption>
+                </div>
+                <aside class="sidebar">
+                    
+                    <a href="plrs.html" class="next-project-btn">
+                        &rarr;
+                    </a>
+                </aside>
+    
             </div>
         </div>
-        <br><br><br>
-
-      </section>
-
     </main>
-
-    <a href="cobot.html" class="next-project-btn">
-        Go to Next Project &rarr;
-    </a>
-
 
     <!-- Footer Section -->
     <footer id="footer">
@@ -139,6 +148,15 @@
             <p>Made by Margaret 2025</p>
         </div>
       </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
   </body>
   </html>

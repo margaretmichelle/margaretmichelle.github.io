@@ -6,11 +6,17 @@
     <title>Margaret Lee | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <!-- <span class="menu-toggle">&#9776;</span> -->
+      <span class="menu-toggle">&#9776;</span>
       <ul class="nav-links">
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#about" class="nav-item">About</a></li>
@@ -64,12 +70,11 @@
           math to create a fundamental understanding of how and why things work. Through elective courses 
           and projects, I have a breadth of knowledge in areas such as robotics, autonomous control,  
           embedded systems, web game design, composites manufacturing, machine learning, and more. 
-          I also love having hobbies on the side like sewing (including designing my own clothes), 
-          travelling, and reading.
+          I am interested in working in the robotics industry or in space exploration and observation 
+          sectors.
         <br><br>
         I built this website from scratch as a fun challenge and to showcase the various projects 
-            I've been working on for the past few years. (P.S. I'm still working on improving mobile 
-            compatability, so beware mobile users.) I love making things, especially if I can be creative 
+            I've been working on for the past few years. I love making things, especially if I can be creative 
             in making them both functional and beautiful.
         </p>
     </div>
@@ -90,9 +95,20 @@
                 <button class="filter-btn kumbh-sans" data-filter="other">Other</button>
             </div>
             <div class="cards kumbh-sans">
+                <a href="projects/lora.html" class="card" data-tags="elec soft">
+                  <div class="card-image-container">
+                    <img src="./images/lora-cover.png">
+                  </div>
+                    <h3>LoRa Pet Tracker</h3>
+                    <p>Never lose your cat again!</p>
+                    <div class="tags">
+                        <span class="tag">ELEC</span>
+                        <span class="tag">SOFT</span>
+                    </div>
+                </a>
                 <a href="projects/plrs.html" class="card" data-tags="design mech">
                   <div class="card-image-container">
-                    <img src="./images/plrs-cover.jpg">
+                    <img src="./images/plrs-cover.png">
                   </div>
                     <h3>POLARIS</h3>
                     <p>A student-built autonomous research sailboat</p>
@@ -101,26 +117,15 @@
                         <span class="tag">Design Team</span>
                     </div>
                 </a>
-                <a href="projects/lora.html" class="card" data-tags="elec soft mech">
+                <a href="projects/cobot.html" class="card" data-tags="soft mech">
                   <div class="card-image-container">
-                    <img src="./images/lora-cover.jpg">
-                  </div>
-                    <h3>LoRa Pet Tracker</h3>
-                    <p>An open-source, low-power tracking PCB</p>
-                    <div class="tags">
-                        <span class="tag">ELEC</span>
-                        <span class="tag">SOFT</span>
-                        <span class="tag">MECH</span>
-                    </div>
-                </a>
-                <a href="projects/cobot.html" class="card" data-tags="soft">
-                  <div class="card-image-container">
-                    <img src="./images/cobot-cover.png">
+                    <img src="./images/cobot-cover-large.png">
                   </div>
                     <h3>TMS Cobot</h3>
                     <p>A robotic system to help cure depression</p>
                     <div class="tags">
                         <span class="tag">SOFT</span>
+                        <span class="tag">MECH</span>
                     </div>
                 </a>
                 <a href="projects/enph353.html" class="card" data-tags="soft">
@@ -156,7 +161,7 @@
                         <span class="tag">Design Team</span>
                     </div>
                 </a>
-                <a href="projects/sewing.html" class="card" data-tags="other">
+                <!-- <a href="projects/sewing.html" class="card" data-tags="other">
                   <div class="card-image-container">
                     <img src="./images/sewing1.jpg">
                   </div>
@@ -165,7 +170,7 @@
                   <div class="tags">
                       <span class="tag">Other</span>
                   </div>
-                </a>
+                </a> -->
                 <a href="projects/travel.html" class="card" data-tags="other">
                     <div class="card-image-container">
                       <img src="./images/my-travel-map.png">
@@ -175,8 +180,70 @@
                     <div class="tags">
                         <span class="tag">Other</span>
                     </div>
-                  </a>
+                </a>
+
+                <div class="card modal-card" data-modal="modal-1" data-tags="mech">
+                  <div class="card-image-container">
+                    <img src="./images/phone2.jpg">
+                    </div>
+                    <h3>Machined Cellphone Holder</h3>
+                    <p>A brass and aluminum collapsible phone holder</p>
+                    <div class="tags">
+                      <span class="tag">MECH</span>
+                    </div>
+                </div>
+                <div class="card modal-card" data-modal="modal-2" data-tags="mech">
+                  <div class="card-image-container">
+                    <img src="./images/bentley1.gif">
+                    </div>
+                    <h3>Car Steering Mechanism</h3>
+                    <p>Mechanical design of a steering system</p>
+                    <div class="tags">
+                      <span class="tag">MECH</span>
+                    </div>
+                </div>
             </div>
+
+            <div id="modal-1" class="modal kumbh-sans">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-title">
+                  <h1 style="margin: 0;">Machined Cellphone Holder</h1>
+                  <p>| 2022 |</p>
+                </div>
+                <div class="modal-main-image">
+                  <img src="./images/phone6.png" alt="Main Image">
+                </div>
+                <p class="modal-description">
+                  To learn how to machine, I created this collapsible cellphone holder out of aluminum plate 
+                  and brass and aluminum round stock. I created my own steel lathe tool bits using a grinder. I 
+                  faced, turned, and threaded on the lathe to create partially threaded rods, threaded end 
+                  caps, and tubes. After waterjet cutting the aluminum plate, I used the milling machine to finish 
+                  the sides and faces. Finally, I tapped holes for screws and completed the final assembly.
+                </p>
+              </div>
+            </div>
+            <div id="modal-2" class="modal kumbh-sans">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-title">
+                  <h1 style="margin: 0;">Car Steering Mechanism</h1>
+                  <p>| MECH 325 | 2022 |</p>
+                </div>
+                <div class="modal-main-image">
+                  <img src="./images/bentley3.png" alt="Main Image">
+                </div>
+                <p class="modal-description">
+                  As our MECH 325 (Machine Design) class project, we developed a rack and pinion steering mechanism 
+                  following textbooks Shigley's Mechanical Engineering Design and Machine Elements in Mechanical Design. 
+                  We sized gears, shafts, and bearings, and ran FEA on critical components under stress such as the tie rod. 
+                  We created the SolidWorks model pictured, presented our design to the class, and wrote a technical report 
+                  stating our process and findings.
+                </p>
+              </div>
+              <img class="modal-corner-image" src="./images/bentley2.png" alt="Corner Image">
+            </div>
+
         </div>
     </section>
 
@@ -215,12 +282,37 @@
         });
         });
 
-      const toggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-    
-      toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
+        document.querySelectorAll('.modal-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const modalId = card.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+              modal.style.display = 'flex';
+            }
+          });
+        });
+
+        document.querySelectorAll('.modal .close').forEach(closeBtn => {
+          closeBtn.addEventListener('click', () => {
+            closeBtn.closest('.modal').style.display = 'none';
+          });
+        });
+
+        // Optional: Close when clicking outside modal content
+        window.addEventListener('click', e => {
+          document.querySelectorAll('.modal').forEach(modal => {
+            if (e.target === modal) {
+              modal.style.display = 'none';
+            }
+          });
+        });
+
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+      
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
     </script>
 
 </body>

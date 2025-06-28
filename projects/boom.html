@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="svg.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <span class="menu-toggle">&#9776;</span>
           <ul class="nav-links">
             <li><a href="../index.html#home" class="nav-item">Home</a></li>
             <li><a href="../index.html#about" class="nav-item">About</a></li>
@@ -31,101 +37,83 @@
       </nav>
 
     <main>
-        <div class="header-container">
-            <div class="header">
-                <h1>Raye Boom Post</h1>
-                <p>| 2021 |</p>
-            </div>
-            <svg class="raye-svg" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
-            
-                <path
-                    class="raye"
-                    d="M 10 24 v -24 l 12 22 h -12 m -0.6 -14 v 14 h -7.4 z m 15.6 16 l -1 -2 m -19 4 l 8 12 q 1.4 0.6 3.4 0 l -0.8 -1.4 h -1.6 l -5 -10.6 z m 16 0 l 3 4 h 1 l -1.4 -4 z"
-                />
-                <path
-                    class="raye-hull"
-                    d="M 0 26 v -2 h 26 v 3 c -5.4 0.8 -21.4 0.2 -26 -1 "
-                />
-            </svg>
-        </div>
-        <div id="tools-overview">
-            <div class="container">
-                <!-- Left Column: Tools -->
-                <div class="left-column">
-                    <h2>Tools</h2>
-                    <ul>
-                        <li>SolidWorks</li>
-                        <li>Engineering drawings (GD&T)</li>
-                        <li>Composites</li>
-                        <li>Hand tools (saw, drill, Dremel)</li>
-                    </ul>
+        <div class="wrapper">
+            <div class="grid-container">
+                <div class="header">
+                    <h1>Raye Boom Post</h1>
+                    <p>| 2021 |</p>
                 </div>
-
-                <!-- Right Column: Overview -->
-                <div class="right-column">
-                    <h2>Overview</h2>
-                    <p>Raye was a 5.5 metre fully autonomous sailboat made to sail the Pacific Ocean. I worked with two others to create 
+                <aside class="project-svg">
+                    <svg class="raye-svg" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
+                        <path class="raye" d="M 10 24 v -24 l 12 22 h -12 m -0.6 -14 v 14 h -7.4 z m 15.6 16 l -1 -2 m -19 4 l 8 12 q 1.4 0.6 3.4 0 l -0.8 -1.4 h -1.6 l -5 -10.6 z m 16 0 l 3 4 h 1 l -1.4 -4 z"/>
+                        <path class="raye-hull" d="M 0 26 v -2 h 26 v 3 c -5.4 0.8 -21.4 0.2 -26 -1 "/>
+                    </svg>
+                </aside>
+                <div class="summary-box">
+                    <h4>Overview:</h4> <p>Raye was a 5.5 metre fully autonomous sailboat made to sail the Pacific Ocean. I worked with two others to create 
                         a boom post to redirect force from the rigging system to a structurally reinforced location and manitain 
                         alignment of the mainsheet. I designed parts in SolidWorks and created drawings to be used in manufacturing 
                         and calculated shearing and tensile stresses experienced by components and by the epoxy at part-part and 
                         part-hull interfaces. Finally, we manufactured the assembly with carbon fibre composites and mounted it 
                         onto the boat. As I was only a first year student, I learned a lot about designing for manufacturing and 
                         best practices for SolidWorks and drawings.
-                        </p>
+                    </p>
                 </div>
+                <div class="keywords-box">
+                    <span class="keyword-tag">SolidWorks</span>
+                    <span class="keyword-tag">Engineering drawings</span>
+                    <span class="keyword-tag">Composites</span>
+                    <span class="keyword-tag">Hand tools (saw, drill, Dremel)</span>
+                </div>
+                <div class="main-content">
+                    <div class="p-image-container">
+                        <img src="../images/boom1.jpg" alt="Raye sailing in the water" class="portfolio-image">
+                    </div>
+                    <figcaption>Raye during in-water testing</figcaption>
+                    <div class="p-image-container">
+                        <img src="../images/boom2.png" alt="Raye CAD top view" class="portfolio-image">
+                    </div>
+                    <figcaption>Raye CAD model (yellow post on left is the boom post)</figcaption>
+                    <div class="p-image-container">
+                        <img src="../images/boom3.png" alt="Boom post CAD" class="portfolio-image">
+                    </div>
+                    <figcaption>Boom post CAD (the half below the gusset plates sits inside the sternmost bay)</figcaption>
+                    <div class="p-image-container">
+                        <img src="../images/boom6.png" alt="Boom post assembly" class="portfolio-image">
+                    </div>
+                    <figcaption>Boom post assembly in Raye</figcaption>
+                    <div class="p-image-container">
+                        <img src="../images/boom4.png" alt="Boom post drawing" class="portfolio-image">
+                    </div>
+                    <div class="p-image-container">
+                        <img src="../images/boom5.png" alt="Boom post drawing" class="portfolio-image">
+                    </div>
+                    <figcaption>Some of the engineering drawings created for documentation and manufacturing</figcaption>
+                </div>
+                <aside class="sidebar">
+                    <a href="lora.html" class="next-project-btn">
+                        &rarr;
+                    </a>
+                </aside>
             </div>
         </div>
-        <br>
-      <div class="p-image-container">
-        <figure>
-            <img src="../images/boom1.jpg" alt="Raye sailing in the water" class="portfolio-image">
-            <figcaption>Raye during in-water testing</figcaption>
-        </figure>
-      </div>
-  
-      <section class="project">
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/boom2.png" alt="Raye CAD top view" class="portfolio-image">
-                <figcaption>Raye CAD model (yellow post on left is the boom post)</figcaption>
-            </figure>
-        </div>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/boom3.png" alt="Boom post CAD" class="portfolio-image">
-                <figcaption>Boom post CAD (the half below the gusset plates sits inside the sternmost bay)</figcaption>
-            </figure>
-        </div>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/boom6.png" alt="Boom post assembly" class="portfolio-image">
-                <figcaption>Boom post assembly in Raye</figcaption>
-            </figure>
-        </div>
-        <div class="p-image-container">
-            <figure>
-                <img src="../images/boom4.png" alt="Boom post drawing" class="portfolio-image">
-                <img src="../images/boom5.png" alt="Boom post drawing" class="portfolio-image">
-                <figcaption>Some of the engineering drawings created for documentation and manufacturing</figcaption>
-            </figure>
-        </div>
-        
-
-      </section>
-
     </main>
-
-    <a href="plrs.html" class="next-project-btn">
-        Go to Next Project &rarr;
-    </a>
-
 
     <!-- Footer Section -->
     <footer id="footer">
         <div class="footer-content">
             <p>Made by Margaret 2025</p>
         </div>
-      </footer>
+    </footer>
 
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
   </body>
-  </html>
+</html>
