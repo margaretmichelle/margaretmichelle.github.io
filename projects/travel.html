@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-          <!-- <span class="menu-toggle">&#9776;</span> -->
+          <span class="menu-toggle">&#9776;</span>
           <ul class="nav-links">
             <li><a href="../index.html#home" class="nav-item">Home</a></li>
             <li><a href="../index.html#about" class="nav-item">About</a></li>
@@ -30,23 +36,22 @@
       </nav>
 
     <main>
-      <div class="header-container">
-        <div class="header">
-            <h1>Travelling</h1>
+      <div class="wrapper">
+        <div class="grid-container">
+          <div class="header">
+              <h1>Travelling</h1>
+          </div>
+          <div class="p-image-container">
+                <img src="../images/my-travel-map.png" alt="Travel map from Matador Network" class="portfolio-image" style="max-height:70vh;">
+          </div> 
+          <aside class="sidebar">
+              <a href="lora.html" class="next-project-btn">
+                  &rarr;
+              </a>
+          </aside>
         </div>
       </div>
-      <div class="p-image-container">
-        <figure>
-            <img src="../images/my-travel-map.png" alt="Travel map from Matador Network" class="portfolio-image">
-        </figure>
-      </div>       
-
     </main>
-
-    <a href="plrs.html" class="next-project-btn">
-        Go to Next Project &rarr;
-    </a>
-
 
     <!-- Footer Section -->
     <footer id="footer">
@@ -54,6 +59,15 @@
             <p>Made by Margaret 2025</p>
         </div>
       </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
   </body>
   </html>
