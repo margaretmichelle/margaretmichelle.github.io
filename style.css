@@ -114,32 +114,40 @@ b {
     fill: #3f3f46; 
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
   /* Responsive Design for Mobile */
   @media (max-width: 768px) {
+    .nav-container {
+      justify-content: left;
+      margin-left: 20px;
+    }
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      color: #3f3f46;
+      font-size: 1.5rem;
+    }
     .nav-links {
       flex-direction: column;
       gap: 10px;
       display: none;
       position: absolute;
       top: 60px;
-      right: 10px;
-      background-color: #dbf9dd;
+      background-color: #fdf9ff;
+      background-image: url('images/noise.png');
+      background-size: 200px 200px;
       padding: 15px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.active {
-        display: flex;
-      }
-    
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        color: white;
-        font-size: 1.5rem;
-      }
+      display: flex;
     }
+  }
 
 .full-page {
     display: flex;
@@ -172,7 +180,7 @@ b {
 }
 
 .full-page#home h1 {
-    font-size: clamp(4rem, 4vw + 1rem, 8rem);
+    font-size: clamp(3rem, 4vw + 1rem, 8rem);
     letter-spacing: 2px;
     margin-bottom: 0;
     margin-top: 0;
@@ -232,6 +240,24 @@ b {
         }
     }
 
+@media (max-width: 1028px) {
+  .full-page#home .text {
+    max-width: 80%;
+    padding-top: 4%;
+    padding-left: 0;
+    top: 15%;
+    left: 10%;
+    z-index: 2;
+    text-align: center;
+  }
+/* 
+  .svg {
+    height: 80vh;
+    top: -20px;
+    right: -280px;
+  } */
+}
+
 /* About Section */
 .full-page#about {
     display: flex;
@@ -243,13 +269,12 @@ b {
     background-position: center, center;
     position: relative;
     gap: 80px;
-    /* margin: 20px 0; */
     min-height: 95vh;
-    /* max-width: 70%; */
 }
 
 .full-page#about img {
     width: 30%;
+    max-width: 800px;
     height: auto;
     border-radius: 8px;
     padding-left: 10%;
@@ -273,6 +298,26 @@ h2 {
     font-size: clamp(1rem, 0.5vw + 0.5rem, 2rem);
     line-height: 1.6;
     color: #3f3f46;
+}
+
+@media (max-width: 1025px) {
+  .full-page#about {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .full-page#about img {
+    width: 50%;
+    max-width: 200px;
+    padding-left: 0;
+  }
+
+  .about-me {
+    max-width: 95vw;
+    padding-right: 0;
+    padding-left: 0;
+    z-index: 2;
+  }
 }
 
 /* Project Section */
@@ -312,7 +357,8 @@ h2 {
   position: relative;
   text-decoration: none;
   color: #3f3f46;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .card[data-tags~="other"] {
@@ -336,6 +382,7 @@ h2 {
 .card p {
   margin-bottom: 10px;
   font-size: 0.95rem;
+  margin: 0 5px 10px;
 }
 
 .card::after {
@@ -372,12 +419,12 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: auto;
 }
 
 .card .tag {
-  background-color: #7e7e87;
-  color: white;
+  background-color: #f0f0f0;
+  color: #333;
   padding: 3px 10px;
   border-radius: 7px;
   font-size: 11px;
@@ -386,6 +433,7 @@ h2 {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
@@ -482,7 +530,26 @@ h2 {
   cursor: pointer;
 }
 
+@media (max-width: 800px) {
+  .cards {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
+  .card {
+    width: 80vw;
+  }
+
+  .card-image-container {
+    width: 80vw;
+    height: 30vw;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 30px 4% 6%;
+  }
+}
 
 /* Footer Styling */
 #footer {
