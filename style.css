@@ -120,28 +120,32 @@ b {
 
   /* Responsive Design for Mobile */
   @media (max-width: 768px) {
+    .navbar {
+      height: 40px;
+    }
     .nav-container {
       justify-content: left;
-      margin-left: 20px;
+      margin-left: 0px;
+      height: 40px;
     }
     .menu-toggle {
       display: block;
       cursor: pointer;
       color: #3f3f46;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      margin-left: 20px;
     }
     .nav-links {
       flex-direction: column;
       gap: 10px;
       display: none;
       position: absolute;
-      top: 60px;
+      top: 40px;
       background-color: #fdf9ff;
       background-image: url('images/noise.png');
       background-size: 200px 200px;
       padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.active {
@@ -534,10 +538,12 @@ h2 {
   .cards {
     padding-left: 5px;
     padding-right: 5px;
+    gap: 25px;
   }
 
   .card {
     width: 80vw;
+    padding-bottom: 20px;
   }
 
   .card-image-container {
