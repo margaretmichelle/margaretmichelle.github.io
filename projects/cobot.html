@@ -64,7 +64,7 @@
                 </aside>
                 <div class="summary-box">
                     <h4>Overview:</h4> <p>We developed a robotic system designed to compensate for patient movement while stimulating the brain with a 
-                        transcranial magentic stimulation (TMS) coil for our 4th year capstone project. TMS is a procedure wherein magnetic flieds 
+                        transcranial magnetic stimulation (TMS) coil for our 4th year capstone project. TMS is a procedure wherein magnetic fields 
                         are used to induce electrical stimulation of brain cells. It can be used to treat depression and requires careful placement 
                         of the coil to target the desired regions of the brain. As such, robotic integration to aid in positioning and compensation can 
                         improve treatment efficacy. Using my knowledge of robot dynamics learned from ETH Zurich, I programmed a cobot arm in Python to 
@@ -86,12 +86,23 @@
                         <img src="../images/cobot2.png" alt="Cobot with TMS coil and handheld patient stand-in with markers" class="portfolio-image">
                     </div>
                     <figcaption>Cobot with TMS coil and handheld patient stand-in with IR reflective markers</figcaption>
-  
+                    <h3>My Contributions:</h3>
+                    <p>
+                        <ul>
+                            <li>Implemented ROS pipeline to control and monitor cobot with Python</li>
+                            <li>Analyzed performance of joint position-based vs. velocity-based control and UR vs custom inverse kinematics</li>
+                            <li>Programmed spatial transformations using tf2 to convert between robot base frame, tool frame, and camera frame</li>
+                            <li>Derived equations to determine cobot tool linear and angular velocities required to maintain precise relative position to the patient’s head</li>
+                            <li>Integrated force/torque sensing for compliant control and safety</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h3>Project Details:</h3>
                     <p>
                         Transcranial Magnetic Stimulation (TMS) is a non-invasive medical procedure wherein certain regions of the brain are stimulated by a magnetic field 
-                        to induce electrical activity in neurons. This is typically used to treat depression. Sponsored by the NINET lab at UBC Department of Psychiatry, 
+                        to induce electrical activity in neurons. This is typically used to treat depression. Sponsored by the NINET lab at the UBC Department of Psychiatry, 
                         my team of four Engineering Physics students worked to develop a system to automate the procedure to increase the precision of stimulation. The main 
-                        issue we tackled was compensating for small movements of the patient during treatment that can misalign the TMS coil providing treatment 
+                        issue we tackled was compensating for small movements of the patient during treatment that can misalign the TMS coil 
                         and the target region in the brain determined by digital MRI mapping. Using a Universal Robots collaborative robot (cobot) arm, ROS, 
                         Python, and an OptiTrack camera paired with Motive, we were successfully able to follow the linear and rotational movement of a surrogate 
                         patient head.
@@ -102,7 +113,7 @@
                     </div>
                     <figcaption>Cobot arm following the markers using (offscreen) IR camera</figcaption>
                     <p>
-                        The OptiTrack stereo camera identifies the position of "rigid bodies" using three IR reflective markers. We tranformed the position and orientation  
+                        The OptiTrack stereo camera identifies the position of "rigid bodies" using three IR reflective markers. We transformed the position and orientation  
                         of the "patient" from image space (the camera coordinate system) to robot space (the cobot's base coordinate system) using a series of three-dimensional 
                         affine transformations. We determined the difference, or the error, between the current cobot pose and the desired robot pose based on where the 
                         "patient" is. A PD (proportional and derivative) control algorithm was used to control the linear and angular velocity of the TMS coil on the end of 
