@@ -50,10 +50,10 @@
                     </svg>
                 </aside>
                 <div class="summary-box">
-                    <h4>Overview:</h4> <p>For ENPH 353, I developed an self-driving car in a simulated environment with 
+                    <h4>Overview:</h4> <p>For ENPH 353, I developed a self-driving car in a simulated environment with 
                         a classmate. The car can drive on the road, using computer vision to distinguish pavement from grass and 
-                        boudnaries indicating other terrain, identify crosswalks and stop for pedestrians, and detect and catalogue 
-                        licence plates with trained convolutional neural networks achieving over 90% prediction accuracy. Through this 
+                        boundaries indicating other terrain, identify crosswalks and stop for pedestrians, and detect and catalogue 
+                        licence plates with trained convolutional neural networks, achieving over 90% prediction accuracy. Through this 
                         project, I practiced PID and Q-learning control algorithms, data processing and classification, and 
                         robotics simulations.
                     </p>
@@ -76,25 +76,25 @@
 
                     <h3 id="background">Background</h3>
                     <p>
-                        The ENPH 353 competition that takes place in a simulated world, running in Gazebo, where participating teams 
+                        The ENPH 353 competition takes place in a simulated world, running in Gazebo, where participating teams 
                         are tasked with the development of an autonomous robot capable of navigating roads and reading licence plates within the 
                         simulation. The simulated world is made up of an inner and outer ring of road with six “parked cars”. Each car has a licence 
                         plate as well as a parking ID posted on its front face. Points are awarded for completing a lap around the outer loop as 
                         well as for correctly reporting a licence plate and its corresponding parking ID back to the score tracker. However, points 
                         can also be deducted for violating traffic rules such as not driving within the white lines and colliding with pedestrians. 
                         This simulation was run completely on Linux in Gazebo Simulator. We took advantage of the modularization available through 
-                        ROS nodes and topics with each task encapsulated within its own node script and only critical information being published 
+                        ROS nodes and topics, with each task encapsulated within its own node script and only critical information being published 
                         to topics.
                     </p>
                     <br>
                     <h3>Driving</h3>
                     <h4>Image Processing</h4>
                     <p>
-                        Using a camera feed from the car read from a ROS topic, we had real-time images to feed our driving algorithm. There were two 
+                        Using a camera feed from the car, we read from a ROS topic, we had real-time images to feed our driving algorithm. There were two 
                         types of terrain to drive on: a paved road with grass lining the sides, and a grassy hill with only white lines indicating 
                         the boundaries of the road. As such, we needed a robust processing technique to ensure our car always knew where the road was. 
                         This process to extract the blocks of white involved HSV filtering with a bitwise mask, a binary filter, a median blur, and 
-                        finally we used OpenCV's contours and moments function to determine the center of mass.
+                        finally, we used OpenCV's contours and moments function to determine the center of mass.
                     </p>
 
                     <div class="p-image-container">
@@ -114,10 +114,10 @@
                         are the proportional gains. The differences are divided by the desired coordinates for normalization purposes and are multiplied 
                         by their respective proportional gain. 
                         $$ v=P_s(1- \frac{|\omega|}{P_x + P_y}) $$
-                        The formula for the linear speed includes a new variable Ps which is the linear proportional gain. We made the simplifying 
-                        assumption that the second term never or rarely exceeds one so the robot’s speed is limited from 0 to Ps. Derivative control 
+                        The formula for the linear speed includes a new variable Ps, which is the linear proportional gain. We made the simplifying 
+                        assumption that the second term never or rarely exceeds one, so the robot’s speed is limited from 0 to Ps. Derivative control 
                         was added to counteract some small oscillations when the proportional control was correcting the trajectory. Overall, this PD control 
-                        was highly successful, easy to tune, and shockily quite robust over different real-time factors dictated by the processing speed 
+                        was highly successful, easy to tune, and shockingly quite robust over different real-time factors dictated by the processing speed 
                         of the computer running the simulation. It was also excellent at correcting itself; we would drop the robot into various sections 
                         of the environment and it was able to straighten out quickly with few oscillations.
                     </p>
@@ -137,15 +137,15 @@
                     <div class="p-image-container">
                         <img src="../images/mldrv5.png" alt="Parked car example" class="portfolio-image">
                     </div>
-                    <figcaption>Example of a "parked car" with stall id number and licence plate</figcaption>
+                    <figcaption>Example of a "parked car" with stall ID number and licence plate</figcaption>
 
                     <p>
-                        We had to identify parked cars and correctly read the stall id number and licence plate number. Similar to previous image processing, 
-                        we utilized a bitwise mask to locate and format parked cars for further processing. We performed a perspeective transform 
-                        on the licence plate to obtain a clear and consistent format for parsing licence plates. Each character of the licence plate were 
+                        We had to identify parked cars and correctly read the stall ID number and licence plate number. Similar to previous image processing, 
+                        we utilized a bitwise mask to locate and format parked cars for further processing. We performed a perspective transform 
+                        on the licence plate to obtain a clear and consistent format for parsing licence plates. Each character of the licence plate was 
                         sliced into individual images by dilating the image and thresholding for the characters to find four bounding rectangles made 
-                        from the contours of the characters. These sliced images were then sent though our convolutional neural network (CNN). We trained our 
-                        CNN on custom datasets consisting of a mix of ideal and real (from simulation) licence plate in Google Colab.
+                        from the contours of the characters. These sliced images were then sent through our convolutional neural network (CNN). We trained our 
+                        CNN on custom datasets consisting of a mix of ideal and real (from simulation) licence plates in Google Colab.
                     </p>
                     <div class="p-image-container">
                         <img src="../images/mldrv6.png" alt="Licence plate contour finding and perspective transform" class="portfolio-image">
