@@ -62,12 +62,9 @@
                 </aside>
                 <div class="summary-box">
                     <h4>Overview:</h4> <p>Over 1 million pets in Canada go missing each year, and over 80% of those who 
-                        are unchipped are never found. As someone who grew up with dogs, this is a heartbreaking 
-                        statistic. While technology exists to track our beloved pets, it's far from perfect, being too 
+                        are unchipped are never found. While technology exists to track our beloved pets, it's far from perfect, being too 
                         costly, passive, or short-range. As my group's senior capstone project, we decided to address these 
-                        shortcomings and design and build our own pet tracking solution using LoRa. LoRa modulation is a technique 
-                        used to encode information on radio waves for long-range applications; it's free to use, energy 
-                        efficient, and highly robust to noise. We designed a compact, LiPo-powered PCB and collar that provides live 
+                        shortcomings and design and build our own pet tracking solution using LoRa. We designed a compact, LiPo-powered PCB and collar that provides live 
                         tracking updates to a custom mobile app. The PCB integrates LoRa, GPS, and IMU modules along with 
                         a custom antenna to provide real-time, responsive monitoring of your pet.
                     </p>
@@ -86,25 +83,37 @@
                             <img src="../images/lora4.jpg" alt="Project fair showcase" class="portfolio-image">
                     </div>
                     <figcaption>Our tracking collar, base station, mobile app showcased at our annual Engineering Physics project fair</figcaption>
-                    <p>We split this project up into three components: hardware and firmware, mobile app and database, antenna 
+                    <h3>My Contributions:</h3>
+                    <p>
+                        <ul>
+                            <li>Wrote C and C++ firmware to communicate with and control GPS and IMU peripherals and integrated LoRa module from the STM32 MCU through I2C, SPI, and UART protocols</li>
+                            <li>Developed collar and base station communication logic, including message structures, parsing routines, and main control loops</li>
+                            <li>Selected battery and designed charging circuitry in Altium based on power consumption analysis</li>
+                            <li>Deconstructed and simulated LoRa modulation scheme to fundamentally understand key signal parameters</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h3>Project Details:</h3>
+                    <p>LoRa modulation is a technique used to encode information on radio waves for long-range applications; it's free to use, energy 
+                        efficient, and highly robust to noise, making it ideal for our application. We split this project up into three components: hardware and firmware, mobile app and database, antenna 
                         and mechanical design. With one person each focusing on the latter two, my teammate and I tackled the 
-                        hardware and firmware coponents. We began prototyping with a SAMD21 Pro RF chip that has both a SAMD21 
-                        and RFM95W, an Adafruit PA1010D GPS module, and a STM32 LSM6DSOX IMU. Using Arduino to program, we experimented 
+                        hardware and firmware components. We began prototyping with a SAMD21 Pro RF chip that has both a SAMD21 
+                        and RFM95W, an Adafruit PA1010D GPS module, and an STM32 LSM6DSOX IMU. Using Arduino to program, we experimented 
                         with the parameters of LoRa modulation, range, and noise immunity. We developed different modes of operation: 
-                        normal, search, and sleep. The user-intitiated search mode sends GPS updates more frequently and transmits 
+                        normal, search, and sleep. The user-initiated search mode sends GPS updates more frequently and transmits 
                         stronger signals using higher power for when you need to actively search for your pet. The sleep mode is 
                         dependent on the IMU readings; if your pet is stationary (e.g. when they're sleeping), the collar will 
                         save energy and will not update the position until your pet moves again. We also implemented acknowledgment 
-                        handshakes and random backoff to ensure reliable connection and handle network collisions between the collar 
+                        handshakes and random backoff to ensure a reliable connection and handle network collisions between the collar 
                         and base station. Lastly, we tested the energy consumption of the components to select a LiPo battery that 
-                        would sustain the device operating in search mdoe (the most demanding mode) for multiple days before needing 
+                        would sustain the device operating in search mode (the most demanding mode) for multiple days before needing 
                         to be charged.
                     </p>
                     <div class="p-image-container">
                         <img src="../images/lora5.png" alt="System diagram" class="portfolio-image">
                     </div>
                     <figcaption>Simplified system diagram</figcaption>
-                    <p>For our PCB, we upgraded our components, replacing the SAMD21 Pro RF with a LoRa-E5 that integrates a STM32WLE5JC 
+                    <p>For our PCB, we upgraded our components, replacing the SAMD21 Pro RF with a LoRa-E5 that integrates an STM32WLE5JC 
                         and a LoRa module into a small package, and switched out our GPS for an Antenova M20071. We ported our previous 
                         work in Arduino to the STM32 environment and wrote libraries for our GPS, IMU, and LoRa that built upon the STM32WLxx 
                         drivers for the STM32WLE5JC to communicate with and command our modules over I2C and UART. I did most of the firmware 
@@ -119,11 +128,11 @@
                     </div>
                     <figcaption>Collar PCB model and schematic</figcaption>
                     <p>Though we experienced issues integrating our collar PCB with our base station that still used the SAMD21 due 
-                        to a mismatch of LoRa parameters between the two systems, this project was a great learning experience and I 
+                        to a mismatch of LoRa parameters between the two systems, this project was a great learning experience, and I 
                         hope to continue working on it as a side project in the future. We were able to achieve a range of 1km in a 
                         suburban environment with our prototype and had a beautiful app and full functionality within the loop between 
                         the app, the server, the base station, and the collar. We were honoured to be awarded the Roy Nodwell Memorial 
-                        Prize given to a project that exhibits high professional standard, shows evidence of original contribution, 
+                        Prize given to a project that exhibits a high professional standard, shows evidence of original contribution, 
                         and has industrial relevance.
                     </p>
                     <div class="p-image-container">
