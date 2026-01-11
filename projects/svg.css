@@ -550,3 +550,76 @@
         transform: translateX(-250px)translateY(0px) rotate(360deg);
     }
 }
+
+/******************************************/
+
+.ock-svg {
+    width: auto;
+    height: 120px;
+    margin-left: auto;
+    padding-top: 8px;
+    fill: var(--grey2);
+}
+
+/* .base {
+    fill: var(--grey1);
+}
+
+.arm {
+    fill: var(--grey2);
+}
+
+.arm-group{
+    transform-origin: 17% 81%;
+    transform-box: fill-box;
+    animation: rotateArm 4s linear infinite alternate;
+}
+
+.shoulder {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.elbow {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.forearm-group {
+    animation: forearm 4s linear infinite alternate;
+}
+
+.forearm {
+    fill: var(--grey1);
+    transform-origin: 7% 4%;
+    transform-box: fill-box;
+    animation: rotateForearm 4s linear infinite alternate;
+}
+
+.wrist-group {
+    transform-origin: 30% 90%;
+    transform-box: fill-box;
+    animation: rotateWrist 4s linear infinite alternate;
+}
+
+.wrist {
+    fill: var(--grey2);
+}
+
+.wristcaps {
+    fill: var(--blue2);
+    stroke: var(--blue2);
+    stroke-width: 0.1px;
+}
+
+.hand {
+    fill: var(--grey1);
+}
+
+.eye {
+    fill: var(--grey3);
+    stroke: #ffffff;
+    stroke-width: 0.2px;
+} */

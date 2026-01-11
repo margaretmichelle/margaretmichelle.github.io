@@ -194,3 +194,18 @@ ul li {
     max-height: 55vh;
   }
 }
+
+.code-section summary {
+  cursor: pointer;
+}
+
+.code-section pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+/* Prism override */
+.code-section pre[class*="language-"] {
+  background: #ffffff;
+}
