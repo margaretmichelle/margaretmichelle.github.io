@@ -64,7 +64,7 @@
                     <span class="keyword-tag">OpenCV</span>
                     <span class="keyword-tag">TensorFlow</span>
                     <span class="keyword-tag">Gazebo Simulator</span>
-                    <span class="keyword-tag">linux</span>
+                    <span class="keyword-tag">Linux</span>
                     <span class="keyword-tag">Machine learning</span>
                     <span class="keyword-tag">Neural networks</span>
                 </div>
@@ -90,11 +90,11 @@
                     <h3>Driving</h3>
                     <h4>Image Processing</h4>
                     <p>
-                        Using a camera feed from the car, we read from a ROS topic, we had real-time images to feed our driving algorithm. There were two 
+                        Using a camera feed from the car, read from a ROS topic, we had real-time images to feed our driving algorithm. There were two 
                         types of terrain to drive on: a paved road with grass lining the sides, and a grassy hill with only white lines indicating 
                         the boundaries of the road. As such, we needed a robust processing technique to ensure our car always knew where the road was. 
-                        This process to extract the blocks of white involved HSV filtering with a bitwise mask, a binary filter, a median blur, and 
-                        finally, we used OpenCV's contours and moments function to determine the center of mass.
+                        This process to extract the white lines involved HSV filtering with a bitwise mask, a binary filter, a median blur, and 
+                        finally, we used OpenCV's contour-finding and moments functions to determine the center of mass.
                     </p>
 
                     <div class="p-image-container">
@@ -110,12 +110,12 @@
                         The center of mass of the white road lines in both x and y (with the origin at the top left of the image) was taken into 
                         consideration in the formula below:
                         $$ \omega = P_x \frac{x_d-x}{x_d} - P_y \frac{y_d-y}{y_d} $$
-                        Where \(x_d\) and \(y_d\) are the desired coordinates, \(x\) and \(y\) are the actual coordinates, and \(P_x\) and \(P_y\)
+                        where \(x_d\) and \(y_d\) are the desired coordinates, \(x\) and \(y\) are the actual coordinates, and \(P_x\) and \(P_y\)
                         are the proportional gains. The differences are divided by the desired coordinates for normalization purposes and are multiplied 
                         by their respective proportional gain. 
                         $$ v=P_s(1- \frac{|\omega|}{P_x + P_y}) $$
-                        The formula for the linear speed includes a new variable Ps, which is the linear proportional gain. We made the simplifying 
-                        assumption that the second term never or rarely exceeds one, so the robot’s speed is limited from 0 to Ps. Derivative control 
+                        The formula for the linear speed includes a new variable, \(P_s\), which is the linear proportional gain. We made the simplifying 
+                        assumption that the second term rarely, if ever, exceeds one, so the robot’s speed is limited from 0 to Ps. Derivative control 
                         was added to counteract some small oscillations when the proportional control was correcting the trajectory. Overall, this PD control 
                         was highly successful, easy to tune, and shockingly quite robust over different real-time factors dictated by the processing speed 
                         of the computer running the simulation. It was also excellent at correcting itself; we would drop the robot into various sections 
@@ -165,7 +165,7 @@
     <!-- Footer Section -->
     <footer id="footer">
         <div class="footer-content">
-            <p>Made by Margaret 2025</p>
+            <p>Made by Margaret 2026</p>
         </div>
       </footer>
 

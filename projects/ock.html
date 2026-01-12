@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaret Lee | LoRa Pet Tracker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="svg.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-matlab.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+          <span class="menu-toggle">&#9776;</span>
+          <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-item">Home</a></li>
+            <li><a href="../index.html#about" class="nav-item">About</a></li>
+            <li><a href="../index.html#projects" class="nav-item">Projects</a></li>
+            <li><a href="../resume.html" class="nav-item">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/lee-margaret/" class=""nav-item>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                class="linkedin-svg"
+                d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"/>
+              </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <main>
+        <div class="wrapper">
+            <div class="grid-container">
+                <div class="header">
+                    <h1>Mister OCK</h1>
+                    <h1 style="font-size: 1.8rem;">(Octopus Control Kinematics)</h1>
+                    <p>| 2025 |</p>
+                </div>
+                <aside class="project-svg">
+                    <svg class="ock-svg" viewBox="-200 0 400 280" xmlns="http://www.w3.org/2000/svg">
+                        <path class="ock1" d="0 48 0 48 14 48 16 65 3 68 3 68 16 65 20 80 8 85 8 85 20 81 26 91 17 100 17 100 26 92 35 100 29 110 29 110 37 102 45 106 42 117 42 117 47 108 56 109 56 119 56 119 58 110 66 109 69 118 69 118 69 108 76 105 81 113 81 113 78 105 84 100 90 106 90 106 86 99 90 93 97 97 97 97 91 92 93 86 100 87 100 87 94 84 94 78 101 77 101 77 94 76 93 71 99 69 99 69 93 69 91 65 95 61 95 61 90 64 86 60 90 56 90 56 86 59 83 58 85 53 85 53 88 49 91 50 90 56 90 56 95 52 98 56 95 61 95 61 101 60 103 64 99 69 99 69 106 68 107 74 101 77 101 77 108 79 107 85 100 87 100 87 107 91 105 97 97 97 97 97 102 102 98 108 90 106 90 106 94 113 88 118 81 113 81 113 83 122 75 125 69 118 69 118 68 127 60 128 56 119 56 119 52 129 44 127 42 117 42 117 36 126 27 122 29 110 29 110 20 117 11 109 17 100 17 100 5 104-1 94 8 85 8 85-5 88-9 72 3 68 3 68-11 69-14 52 0 48 0 48-16 48-16 0Z" />
+                        <path class="ock2" d="0 48 0 48 14 48 16 65 3 68 3 68 16 65 20 80 8 85 8 85 20 81 26 91 17 100 17 100 26 92 35 100 29 110 29 110 37 102 45 106 42 117 42 117 47 108 56 109 56 119 56 119 58 110 66 109 69 118 69 118 69 108 76 105 81 113 81 113 78 105 84 100 90 106 90 106 86 99 90 93 97 97 97 97 91 92 93 86 100 87 100 87 94 84 94 78 101 77 101 77 94 76 93 71 99 69 99 69 93 69 91 65 95 61 95 61 90 64 86 60 90 56 90 56 86 59 83 58 85 53 85 53 88 49 91 50 90 56 90 56 95 52 98 56 95 61 95 61 101 60 103 64 99 69 99 69 106 68 107 74 101 77 101 77 108 79 107 85 100 87 100 87 107 91 105 97 97 97 97 97 102 102 98 108 90 106 90 106 94 113 88 118 81 113 81 113 83 122 75 125 69 118 69 118 68 127 60 128 56 119 56 119 52 129 44 127 42 117 42 117 36 126 27 122 29 110 29 110 20 117 11 109 17 100 17 100 5 104-1 94 8 85 8 85-5 88-9 72 3 68 3 68-11 69-14 52 0 48 0 48-16 48-16 0Z" />
+                    </svg>
+                </aside>
+                <div class="summary-box">
+                    <h4>Overview:</h4> <p>While interning at Formlabs, I participated in a hackathon sponsored by the company and developed a soft robotics 
+                        octopus arm with a fellow intern. Soft robotics has become an increasingly prominent field of study motivated by the challenges 
+                        conventional rigid robots face interacting with the environment, particularly with gripping complex or fragile objects. My teammate 
+                        and I wanted to design an arm to be printed using Formlabs' flexible resins that can grip objects and look cool while doing it. In a 
+                        weekend, we achieved simultaneous control of two 1-DOF octopus arms capable of handling objects, and underactuated control of 
+                        a 2-DOF octopus arm capable of looking cool.
+                    </p>
+                </div>
+                <div class="keywords-box">
+                    <span class="keyword-tag">Soft robotics</span>
+                    <span class="keyword-tag">SolidWorks</span>
+                    <span class="keyword-tag">MATLAB</span>
+                    <span class="keyword-tag">Rapid prototyping</span>
+                    <span class="keyword-tag">Compliant mechanism design</span>
+                    <span class="keyword-tag">SLA 3D printing</span>
+                    <!-- <span class="keyword-tag">Tension-driven actuation</span> -->
+                </div>
+                <div class="main-content">
+                    <div class="p-image-container">
+                        <video controls class="portfolio-video">
+                            <source src="../images/ock4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <figcaption>1-DOF Mister OCK arms opening and closing and grabbing a cup of water</figcaption>
+                    <div class="p-image-container">
+                        <video controls class="portfolio-video">
+                            <source src="../images/ock2d.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <figcaption>2-DOF Mister OCK arm moving in a circle</figcaption>
+                    <h3>My Contributions:</h3>
+                    <p>
+                        <ul>
+                            <li>Modeled octopus arms in SolidWorks to be printed on Form 4Ls</li>
+                            <li>Iterated over 15+ arms by:
+                                <ul>
+                                    <li>Simulating curl motion and final position in MATLAB to optimize joint geometry and link lengths, translating that to SolidWorks design</li>
+                                    <li>Rapidly printing and evaluating versions of arms with different materials and geometries to converge upon a satisfactory spiral</li>
+                                </ul>
+                            </li>
+                            <li>Redesigned the 1-DOF arm into a 2-DOF system, including a complete reconfiguration of the arm, mount, and pulleys</li>
+                            <li>Assembled arm, motor, mount, pulley, and fishing line system developing thread tensioning and fastening technique using ferrules</li>
+                        </ul>
+                    </p>
+                    <br>
+                    <h3>Project Details:</h3>
+                    <p>The final 1-DOF octopus arm system consists of two compliant arms bolted to a 3D-printed mounting structure, which also houses two stepper 
+                        motors driving pulley mechanisms. Fishing line tendons were routed along both sides of each arm and wrapped around the corresponding pulley in opposing 
+                        directions. Rotating the pulley increases tension in one tendon while releasing the opposing tendon simultaneously to produce controlled curling of 
+                        the arm. The system uses two stepper motor drivers powered by a 24 V supply, and is controlled with an Arduino Mega running a script to manually drive 
+                        the motors.
+
+                        The 2-DOF system has a similar architecture except tendons were routed through each face of the arm, with tendons from opposing faces connected to the 
+                        same pulley.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/ock1.jpg" alt="Full system" class="portfolio-image">
+                    </div>
+                    <figcaption>1-DOF and 2-DOF octopus arm systems</figcaption>
+                    <p>Drawing inspiration from a similar design, I modeled the octopus arm in SolidWorks with the requirement that it needed to be 3D printed on an SLA printer. 
+                        To determine the chamfer angles of the links as well link lengths, I created a simple simulation of the geometry in MATLAB to see how the arm looked as 
+                        it closed. This informed the final design of the arm.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/ocksim.gif" alt="MATLAB simulation" class="portfolio-image">
+                    </div>
+                    <figcaption>MATLAB simulation of 1-DOF arm closing</figcaption>
+                    <section class="code-section">
+                        <details>
+                            <summary>Show code</summary>
+
+                            <pre><code class="language-matlab">%% PARAMETERS
+N_links = 16;
+
+dtheta = deg2rad(0.3);
+
+base_w = 16;
+base_angle = deg2rad(90);
+l1_w = 14;
+l1_angle = deg2rad(80);
+
+% Joints
+j_angles_deg = [10 10 20 20 30 30 30 30 30 30 30 30 30 30 30 30 0];
+j_angles = deg2rad(j_angles_deg);
+j_dist = [0 20 38 55 71 86 100 113 126 138 149 159 169 178 186 194 200] * 1;
+
+% Links
+l_angles_deg = [85 85 80 80 80 80 80 80 80 80 80 80 80 80 80 80];
+l_angles = deg2rad(l_angles_deg);
+l_widths = [14 13 12 11.4 10.7 10 9.4 8.9 8.3 7.8 7.3 6.9 6.4 6. 5.7 5.2];
+
+% Base
+base_width = 16;
+
+%% Define links and joints
+% Joint points
+j_pts = [zeros(1, N_links+1); j_dist(1:N_links+1)];
+
+% Base points
+base_pts = [base_width base_width; -48 0];
+
+% Link points
+l_pts1 = zeros(2, N_links); % bottom points of link edge
+l_pts2 = zeros(2, N_links); % top points of link edge
+
+for link = 1:N_links
+    w = l_widths(link);
+    joint = j_dist(link);
+    if link == 1
+        angle_bottom = pi/2 - j_angles(link) - pi/2;
+    else
+        angle_bottom = pi/2 - j_angles(link) - l_angles(link - 1);
+    end
+    angle_top = pi/2 - l_angles(link);
+
+    l_pts1(1, link) = w;
+    l_pts1(2, link) = joint - w * tan(angle_bottom);
+
+    l_pts2(1, link) = w;
+    l_pts2(2, link) = j_dist(link+1) - abs(w * tan(angle_top));
+end
+
+% Left side
+l_pts1_L = [-l_pts1(1,:); l_pts1(2,:)];
+l_pts2_L = [-l_pts2(1,:); l_pts2(2,:)];
+
+
+%% Helper functions
+R = @(P,th,p) ([cos(th) -sin(th); sin(th) cos(th)] * (P - p)) + p;
+
+
+function P = points_in_order(joints, links_1, links_2)
+    n = size(links_1,2);
+
+    P = zeros(2, 4*n);
+
+    P(:, 1:4:end) = joints(:,1);
+    P(:, 2:4:end) = links_1;
+    P(:, 3:4:end) = links_2;
+    P(:, 4:4:end) = joints(:,2);
+
+end
+
+%% Simulation loop
+figure; hold on; axis equal; grid off;
+xlabel('X'); ylabel('Y');
+title('Mister Ock Simulation');
+
+
+for th = 0:dtheta:max(j_angles)
+    cla;
+    P = [base_pts(:,1) base_pts(:,2) j_pts(:,1)];
+    plot(P(1,:), P(2,:), 'k', 'LineWidth', 2);
+    P = [-P(1,:); P(2,:)];
+    plot(P(1,:), P(2,:), 'k', 'LineWidth', 2);
+
+    for joint = 1:N_links
+        if th+deg2rad(2) < j_angles(joint)
+            j_pts(:,joint:end) = R(j_pts(:,joint:end),-dtheta,j_pts(:,joint));
+            l_pts1(:,joint:end) = R(l_pts1(:,joint:end),-dtheta,j_pts(:,joint));
+            l_pts2(:,joint:end) = R(l_pts2(:,joint:end),-dtheta,j_pts(:,joint));
+
+            l_pts1_L(:,joint:end) = R(l_pts1_L(:,joint:end),-dtheta,j_pts(:,joint));
+            l_pts2_L(:,joint:end) = R(l_pts2_L(:,joint:end),-dtheta,j_pts(:,joint));
+
+        end
+        P = points_in_order(j_pts(:,joint:joint+1), l_pts1(:,joint), l_pts2(:,joint));
+        plot(P(1,:), P(2,:), 'k', 'LineWidth', 2);
+
+        P = points_in_order(j_pts(:,joint:joint+1), l_pts1_L(:,joint), l_pts2_L(:,joint));
+        plot(P(1,:), P(2,:), 'k', 'LineWidth', 2);
+
+        plot(j_pts(1,joint), j_pts(2,joint),'bo','MarkerFaceColor','b', 'MarkerSize', 2);
+    end
+    drawnow;
+    pause(0.02);
+end
+                            </code></pre>
+                        </details>
+                    </section>
+                    <p>A parameter not accounted for in the MATLAB simulation, was the thickness of the joints which dictates the force required to close each gap and 
+                        therefore the order in which the gaps between the links close. We determined the joint thicknesses through a trial and error process of rapid iteration 
+                        and evaluation. We also took advantage of the multiple printers available to us to compare Flexible 80A and Elastic 50A resins. We found that Elastic 
+                        50A was not stiff enough so we went with the material with the higher Shore A hardness: Flexible 80A. We also rapidly prototyped pulley designs varying 
+                        diameters, groove angles, and materials.
+                    </p>
+                    <div class="p-image-container">
+                        <img src="../images/ock2-labeled.jpg" alt="Arm and pulley iterations" class="portfolio-image">
+                    </div>
+                    <figcaption>Some of our octopus arm and pulley design iterations</figcaption>
+                    <p>Our primary failure mode within the system was pulley failure. We broke a large number of pulley shafts due to combined bending and torsional loads amplified 
+                        by the stress concentrations where the shaft exits the motor housing and at the shaft–hub (chamfer) transition. A large contributor to these failures 
+                        was the flawed, though simple, opposing-wrap design because the fishing line does not simultaneously tension and slack perfectly in practice. This led to 
+                        increased tendon forces and radial loading as well as a higher likelihood of snagging or overtensioning with repeated cycles. Additionally, the pulleys were 
+                        coupled to the motors via unsupported cantilevered shafts and thus experienced significant bending moments; adding an outboard bearing would have reduced 
+                        shaft bending and improved pulley lifetime. Finally, our pulleys were printed in Rigid 10K resin for its high stiffness, but this material is brittle. 
+                        Printing the pulleys out of a more ductile material such as Tough or Durable would have increased pulley survivability, albeit with stiffness trade-offs.
+                    </p>
+                
+                    <div class="p-image-container">
+                        <video controls class="portfolio-video">
+                            <source src="../images/ockfail.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <figcaption>Pulley failures</figcaption>
+                </div>
+                <aside class="sidebar">
+                    <a href="lora.html" class="next-project-btn">
+                        &rarr;
+                    </a>
+                </aside>
+    
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>Made by Margaret 2026</p>
+        </div>
+      </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+  </body>
+  </html>
+
+  
