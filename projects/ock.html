@@ -58,8 +58,8 @@
                 <div class="summary-box">
                     <h4>Overview:</h4> <p>While interning at Formlabs, I participated in a hackathon sponsored by the company and developed a soft robotics 
                         octopus arm with a fellow intern. Soft robotics has become an increasingly prominent field of study motivated by the challenges 
-                        conventional rigid robots face interacting with the environment, particularly with grippng complex or fragile objects. My teammate 
-                        and I wanted to design an arm to be printed using Formlab's flexible resins that can grip objects and look cool while doing it. In a 
+                        conventional rigid robots face interacting with the environment, particularly with gripping complex or fragile objects. My teammate 
+                        and I wanted to design an arm to be printed using Formlabs' flexible resins that can grip objects and look cool while doing it. In a 
                         weekend, we achieved simultaneous control of two 1-DOF octopus arms capable of handling objects, and underactuated control of 
                         a 2-DOF octopus arm capable of looking cool.
                     </p>
@@ -80,14 +80,14 @@
                         Your browser does not support the video tag.
                         </video>
                     </div>
-                    <figcaption>1-DOF mister OCK arms opening and closing and grabbing a cup of water</figcaption>
+                    <figcaption>1-DOF Mister OCK arms opening and closing and grabbing a cup of water</figcaption>
                     <div class="p-image-container">
                         <video controls class="portfolio-video">
                             <source src="../images/ock2d.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                         </video>
                     </div>
-                    <figcaption>2-DOF mister OCK arm moving in a circle</figcaption>
+                    <figcaption>2-DOF Mister OCK arm moving in a circle</figcaption>
                     <h3>My Contributions:</h3>
                     <p>
                         <ul>
@@ -116,9 +116,9 @@
                     <div class="p-image-container">
                         <img src="../images/ock1.jpg" alt="Full system" class="portfolio-image">
                     </div>
-                    <figcaption>1-DOF and 2-DOF octopous arm systems</figcaption>
+                    <figcaption>1-DOF and 2-DOF octopus arm systems</figcaption>
                     <p>Drawing inspiration from a similar design, I modeled the octopus arm in SolidWorks with the requirement that it needed to be 3D printed on an SLA printer. 
-                        To determine the chamfer angles of the links as well link lengths, I created a simple simulation of the geometry in MATLAB to see how to arm looked as 
+                        To determine the chamfer angles of the links as well link lengths, I created a simple simulation of the geometry in MATLAB to see how the arm looked as 
                         it closed. This informed the final design of the arm.
                     </p>
                     <div class="p-image-container">
@@ -238,7 +238,7 @@ end
                             </code></pre>
                         </details>
                     </section>
-                    <p>A parameter not accounted for in the MATLAB simulation, was the thickness of the joints which dictate the force required to close each gap and 
+                    <p>A parameter not accounted for in the MATLAB simulation, was the thickness of the joints which dictates the force required to close each gap and 
                         therefore the order in which the gaps between the links close. We determined the joint thicknesses through a trial and error process of rapid iteration 
                         and evaluation. We also took advantage of the multiple printers available to us to compare Flexible 80A and Elastic 50A resins. We found that Elastic 
                         50A was not stiff enough so we went with the material with the higher Shore A hardness: Flexible 80A. We also rapidly prototyped pulley designs varying 
@@ -250,10 +250,10 @@ end
                     <figcaption>Some of our octopus arm and pulley design iterations</figcaption>
                     <p>Our primary failure mode within the system was pulley failure. We broke a large number of pulley shafts due to combined bending and torsional loads amplified 
                         by the stress concentrations where the shaft exits the motor housing and at the shaft–hub (chamfer) transition. A large contributor to these failures 
-                        was the flawed, though simple, opposing-wrap design because the fishing line does not simultaneously tension and slack perfectly in practice. This lead to 
+                        was the flawed, though simple, opposing-wrap design because the fishing line does not simultaneously tension and slack perfectly in practice. This led to 
                         increased tendon forces and radial loading as well as a higher likelihood of snagging or overtensioning with repeated cycles. Additionally, the pulleys were 
                         coupled to the motors via unsupported cantilevered shafts and thus experienced significant bending moments; adding an outboard bearing would have reduced 
-                        shaft bending and improved pulley lifetime. Finally, our final pulleys were printed in Rigid 10K resin for its high stiffness, but this material is brittle. 
+                        shaft bending and improved pulley lifetime. Finally, our pulleys were printed in Rigid 10K resin for its high stiffness, but this material is brittle. 
                         Printing the pulleys out of a more ductile material such as Tough or Durable would have increased pulley survivability, albeit with stiffness trade-offs.
                     </p>
                 
