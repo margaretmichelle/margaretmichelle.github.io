@@ -154,6 +154,20 @@ ul li {
     box-shadow: 0 0 3px #a8a8a8;
 }
 
+.code-section summary {
+  cursor: pointer;
+}
+
+.code-section pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+.code-section pre[class*="language-"] {
+  background: #ffffff;
+}
+
 /* Show 8/4 layout only on larger screens */
 @media (min-width: 1025px) {
   .wrapper {
@@ -193,19 +207,8 @@ ul li {
     max-width: 750px;
     max-height: 55vh;
   }
-}
 
-.code-section summary {
-  cursor: pointer;
-}
-
-.code-section pre {
-  padding: 1rem;
-  overflow-x: auto;
-  border-radius: 6px;
-}
-
-/* Prism override */
-.code-section pre[class*="language-"] {
-  background: #ffffff;
+  /* .ock-svg {
+    transform: rotate(90deg);
+  } */
 }
