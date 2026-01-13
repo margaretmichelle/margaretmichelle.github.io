@@ -556,7 +556,9 @@
     width: auto;
     height: 120px;
     margin-left: auto;
+    transform-origin: center;
     transform: scale(1, -1);
+    display: block;
 }
 
 .ock1 {
